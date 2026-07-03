@@ -1,0 +1,363 @@
+<!DOCTYPE html><html class="dark" lang="tr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Ayşe &amp; Ahmet — Düğün Davetiyesi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#f6b4d1",
+                "on-primary-fixed": "#350c23",
+                "tertiary-fixed": "#ffddba",
+                "on-primary-fixed-variant": "#68374f",
+                "error": "#ffb4ab",
+                "on-error": "#690005",
+                "inverse-on-surface": "#3d2c31",
+                "on-tertiary-fixed-variant": "#673d00",
+                "on-primary": "#4e2139",
+                "on-secondary-fixed-variant": "#7c2c23",
+                "surface-container": "#2b1b20",
+                "surface-dim": "#1d0f14",
+                "on-primary-container": "#d596b3",
+                "on-background": "#f7dce2",
+                "secondary-fixed-dim": "#ffb4a9",
+                "primary-container": "#5d2e46",
+                "outline": "#9c8d92",
+                "error-container": "#93000a",
+                "surface-container-high": "#36252b",
+                "surface": "#1d0f14",
+                "inverse-primary": "#834e68",
+                "background": "#1d0f14",
+                "secondary-fixed": "#ffdad5",
+                "secondary": "#ffb4a9",
+                "on-surface": "#f7dce2",
+                "inverse-surface": "#f7dce2",
+                "secondary-container": "#7c2c23",
+                "tertiary": "#ffb865",
+                "primary-fixed": "#ffd8e7",
+                "outline-variant": "#504348",
+                "on-secondary-container": "#ff9a8c",
+                "surface-bright": "#46343a",
+                "on-secondary-fixed": "#400101",
+                "on-error-container": "#ffdad6",
+                "surface-container-lowest": "#180a0f",
+                "surface-container-low": "#26171c",
+                "on-surface-variant": "#d4c2c8",
+                "on-tertiary": "#482a00",
+                "primary-fixed-dim": "#f6b4d1",
+                "tertiary-container": "#5a3500",
+                "surface-variant": "#423035",
+                "primary": "#f6b4d1",
+                "tertiary-fixed-dim": "#ffb865",
+                "on-tertiary-container": "#de9b48",
+                "surface-container-highest": "#423035",
+                "on-secondary": "#5e1610",
+                "on-tertiary-fixed": "#2b1700"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-md": "32px",
+                "margin-desktop": "64px",
+                "unit": "8px",
+                "stack-lg": "80px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "container-max": "1280px",
+                "stack-sm": "12px",
+                "section-gap": "120px"
+            },
+            "fontFamily": {
+                "label-sm": ["Hanken Grotesk"],
+                "headline-lg": ["Playfair Display"],
+                "label-lg": ["Hanken Grotesk"],
+                "body-lg": ["Hanken Grotesk"],
+                "headline-xl": ["Playfair Display"],
+                "headline-md": ["Playfair Display"],
+                "headline-lg-mobile": ["Playfair Display"],
+                "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #1d0f14;
+            color: #f7dce2;
+            overflow-x: hidden;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        .parallax-bg {
+            transition: transform 0.1s ease-out;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+
+        .boho-border {
+            border: 1px solid rgba(255, 184, 101, 0.2);
+            position: relative;
+        }
+        .boho-border::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 1px solid rgba(255, 184, 101, 0.1);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-tertiary selection:text-on-tertiary">
+<div class="grain-overlay"></div>
+<!-- Top Navigation App Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface-dim/80 shadow-[0_8px_32px_0_rgba(62,102,89,0.05)]">
+<div class="flex items-center justify-between px-gutter py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">waves</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary tracking-widest uppercase">
+                Ayşe &amp; Ahmet
+            </div>
+<button class="text-primary transition-all duration-700 ease-in-out hover:scale-110">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full object-cover scale-110 parallax-bg opacity-30 blur-md bg-cover bg-center" style="background-image: url('./rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/60 to-surface"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl reveal active">
+<div class="mb-stack-sm text-tertiary font-label-lg tracking-[0.3em] uppercase">Bir Aşk Hikayesi Başlıyor</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8 leading-none">
+                    Ayşe <span class="text-tertiary italic">&amp;</span> Ahmet
+                </h1>
+<div class="flex justify-center mb-8">
+    <div class="w-56 h-80 md:w-72 md:h-96 rounded-[120px] overflow-hidden border-2 border-tertiary/30 p-1 shadow-2xl">
+        <img src="./rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg" alt="Ayşe ve Ahmet" class="w-full h-full object-cover rounded-[120px]">
+    </div>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="h-16 w-px bg-gradient-to-b from-tertiary/0 to-tertiary"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">
+                        Sanatsal bir ruhun, özgür bir kalple buluştuğu bu özel geceyi bizimle paylaşın.
+                    </p>
+</div>
+</div>
+</section>
+<!-- The Date & Location -->
+<section class="py-stack-lg bg-surface relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="reveal stagger-1 active flex flex-col gap-8">
+    <!-- Tarih & Saat Kartı -->
+    <div class="boho-border p-8 md:p-10 bg-surface-container-low rounded-lg overflow-hidden shadow-lg">
+        <div class="font-headline-lg text-headline-lg text-primary mb-2">24 Ağustos</div>
+        <div class="font-label-lg text-label-lg text-secondary tracking-widest uppercase mb-8">Cumartesi, 2026</div>
+        <div class="space-y-6">
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-tertiary">local_bar</span>
+                <div>
+                    <div class="font-label-lg text-label-lg text-on-surface">Karşılama Saati</div>
+                    <div class="font-body-md text-body-md text-on-surface-variant">19:00</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-tertiary">favorite</span>
+                <div>
+                    <div class="font-label-lg text-label-lg text-on-surface">Tören Saati</div>
+                    <div class="font-body-md text-body-md text-on-surface-variant">20:00</div>
+                </div>
+            </div>
+        </div>
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+Ahmet+D%C3%BC%C4%9F%C3%BCn+T%C3%B6reni&dates=20260824T160000Z/20260824T210000Z&details=Bu+mutlu+g%C3%BCn%C3%BCm%C3%BCzde+sizi+de+aram%C4%B1zda+g%C3%B6rmekten+mutluluk+duyar%C4%B1z.&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi,+Becen,+Elit+Sk.+NO+:+8,+38040+Melikgazi/Kayseri" target="_blank" rel="noopener noreferrer" class="mt-8 block px-8 py-4 bg-tertiary text-on-tertiary font-label-lg tracking-widest uppercase hover:bg-tertiary-container transition-all duration-300 w-full text-center rounded">
+            AKILLI TAKVİME EKLE
+        </a>
+    </div>
+
+
+</div>
+<div class="relative h-[500px] reveal stagger-2 active">
+<div class="absolute top-0 left-0 w-[75%] h-[80%] object-cover rounded-lg shadow-xl bg-cover bg-center" style="background-image: url('./Çift_temalı_resim_oluştur_2K_202607021926.jpeg')"></div>
+<div class="absolute bottom-0 right-0 w-[65%] h-[75%] object-cover rounded-lg shadow-2xl border-4 border-surface bg-cover bg-center" style="background-image: url('./bu_çifti_(image.png)_deki_temalı_202607021925.jpeg')"></div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container p-6 rounded-lg hidden md:flex items-center justify-center border border-outline/20 z-10 shadow-lg">
+<p class="font-headline-md text-headline-md text-primary italic leading-tight text-center">“Aşk, en özgür sanattır.”</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Artistic Break -->
+<section class="py-section-gap flex flex-col items-center justify-center text-center px-margin-mobile reveal active">
+<div class="w-24 h-px bg-tertiary mb-stack-md"></div>
+<blockquote class="font-headline-lg text-headline-lg text-on-surface max-w-3xl italic">
+                "Hayatımızın bu en anlamlı serüvenine, ruhumuzun müziğini katarak başlıyoruz."
+            </blockquote>
+<div class="w-24 h-px bg-tertiary mt-stack-md"></div>
+</section>
+<!-- Event Timeline / Cards -->
+<section class="py-stack-lg bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-stack-lg text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Program</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Gece boyunca sürecek sanat ve kutlama akışı</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-unit">
+<!-- Step 1 -->
+<div class="bg-surface-container p-10 reveal stagger-1 flex flex-col gap-6 border-l border-tertiary/20 active" style="--mouse-x: 367px; --mouse-y: 1731.39990234375px;">
+<div class="text-tertiary font-headline-md text-headline-md">19:00</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Karşılama Kokteyli</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bahçede gün batımı eşliğinde akustik melodiler ve tadımlar.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl">local_bar</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-high p-10 reveal stagger-2 flex flex-col gap-6 border-l border-tertiary/40 active">
+<div class="text-tertiary font-headline-md text-headline-md">20:00</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Nikah Töreni</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Asırlık ağaçların altında, yıldızların şahitliğinde 'Evet'.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-highest p-10 reveal stagger-3 flex flex-col gap-6 border-l border-tertiary/60 active">
+<div class="text-tertiary font-headline-md text-headline-md">21:00</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Akşam Yemeği &amp; Eğlence</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bohem sofralarda şölen, sonrasında sınırsız müzik.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl">restaurant</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RSVP Section -->
+<section class="py-section-gap relative">
+<div class="max-w-2xl mx-auto px-margin-mobile reveal active">
+
+</div>
+</section>
+<!-- Mekan Bilgisi Section (Bottom) -->
+<section class="py-stack-lg bg-surface relative">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop reveal active">
+        <div class="boho-border p-8 md:p-12 bg-surface-container-low rounded-lg overflow-hidden shadow-2xl flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+            <div class="w-full md:w-1/2 space-y-6">
+                <div class="font-headline-lg text-headline-lg text-primary mb-6">Mekan Bilgisi</div>
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-tertiary mt-1 text-3xl">location_on</span>
+                    <div>
+                        <div class="font-headline-md text-headline-md text-on-surface mb-2">İdeal Moonlight Davet Etkinlik Merkezi</div>
+                        <div class="font-body-lg text-body-lg text-on-surface-variant">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</div>
+                    </div>
+                </div>
+                <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" rel="noopener noreferrer" class="mt-8 flex items-center justify-center gap-2 px-8 py-4 bg-tertiary text-on-tertiary font-label-lg tracking-widest uppercase hover:bg-tertiary-container transition-all duration-300 w-full md:w-max text-center rounded shadow-lg">
+                    <span class="material-symbols-outlined text-lg">directions_car</span>
+                    YOL TARİFİ AL
+                </a>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-96 rounded-lg overflow-hidden border border-outline/20 shadow-lg">
+                <iframe src="https://maps.google.com/maps?q=%C4%B0deal%20Moonlight%20Davet%20Etkinlik%20Merkezi,%20Kayseri&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-section-gap">
+
+</footer>
+<script>
+        // Simple reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax-bg');
+            if(parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
+            }
+            revealOnScroll();
+        });
+
+        // Initialize reveal
+        revealOnScroll();
+
+        // Subtle mouse interaction for grain/cards
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.bg-surface-container').forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+
+
+</body></html>

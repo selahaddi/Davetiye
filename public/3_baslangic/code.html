@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ela &amp; Can — Düğün Davetiyesi</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&family=Work+Sans:wght@400;600&family=Playfair+Display:ital,wght@0,400;1,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{
+"colors":{"on-secondary-container":"#6b6450","primary-container":"#8fb9aa","on-secondary-fixed-variant":"#4c4634","surface-variant":"#cae8e8","surface-container-low":"#dbfaf9","primary":"#3e6659","surface-container-highest":"#cae8e8","on-tertiary-fixed":"#380d00","outline":"#717975","on-tertiary-fixed-variant":"#6f3720","on-primary":"#ffffff","outline-variant":"#c0c8c4","on-secondary":"#ffffff","background":"#e2ffff","inverse-on-surface":"#d8f7f6","surface-tint":"#3e6659","on-error-container":"#93000a","secondary-fixed-dim":"#cfc6ae","surface-container":"#d5f4f4","secondary-fixed":"#ece2c9","surface-container-high":"#d0eeee","primary-fixed":"#c0ecdc","on-primary-fixed":"#002018","on-background":"#022020","tertiary-fixed":"#ffdbce","surface":"#e2ffff","on-surface-variant":"#414845","surface-bright":"#e2ffff","on-surface":"#022020","inverse-primary":"#a5d0c0","inverse-surface":"#193535","on-secondary-fixed":"#201b0c","tertiary-container":"#ec9d80","tertiary":"#8c4e35","secondary-container":"#ece2c9","on-tertiary":"#ffffff","error-container":"#ffdad6","on-error":"#ffffff","on-primary-fixed-variant":"#264e42","tertiary-fixed-dim":"#ffb59a","secondary":"#645e4b","primary-fixed-dim":"#a5d0c0","on-primary-container":"#224a3f","surface-container-lowest":"#ffffff","on-tertiary-container":"#6b341d","error":"#ba1a1a","surface-dim":"#c2e0e0"},
+"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"1rem","full":"9999px"},
+"spacing":{"gutter":"24px","unit":"8px","margin-mobile":"24px","section-gap":"80px","margin-desktop":"64px"},
+"fontFamily":{"headline-md":["Plus Jakarta Sans"],"label-caps":["Work Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Work Sans"],"body-md":["Work Sans"],"serif-elegant":["Playfair Display","serif"]},
+"fontSize":{"headline-md":["24px",{"lineHeight":"1.4","letterSpacing":"0.01em","fontWeight":"500"}],"label-caps":["12px",{"lineHeight":"1.0","letterSpacing":"0.1em","fontWeight":"600"}],"display-lg-mobile":["36px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"300"}],"display-lg":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"300"}],"body-lg":["18px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"400"}]}
+}}}
+</script>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;display:inline-block;line-height:1;vertical-align:middle}
+body{background-color:#e2ffff;color:#022020;scroll-behavior:smooth}
+.glass-effect{background:rgba(226,255,255,0.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.hero-mask{mask-image:linear-gradient(to bottom,black 85%,transparent 100%)}
+.wave-float{animation:wave 8s ease-in-out infinite}
+@keyframes wave{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+</style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-fixed/30 overflow-x-hidden min-h-screen">
+
+<!-- Hero Section -->
+<section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/20 via-surface/40 to-surface hero-mask"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=2000&q=80')] bg-cover bg-center opacity-30"></div>
+    <div class="relative z-10 text-center px-margin-mobile">
+        <p class="font-label-caps text-label-caps text-primary tracking-widest mb-6 wave-float">EVLENİYORUZ</p>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface tracking-tight mb-4">Ela &amp; Can</h1>
+        <div class="w-16 h-px bg-primary/40 mx-auto my-6"></div>
+        <p class="font-serif-elegant text-xl italic text-on-surface-variant">24 Ağustos 2026 — Cumartesi</p>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"><span class="material-symbols-outlined text-primary/50 text-3xl">expand_more</span></div>
+</section>
+
+<!-- Content -->
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop pb-24">
+    <!-- Welcome -->
+    <section class="text-center py-section-gap">
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto leading-relaxed">Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz. Sevgi ve kahkahalarla dolu bu günde yanımızda olmanız dileğiyle.</p>
+    </section>
+
+    <!-- Bento Grid Details -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+        <!-- Date Card -->
+        <div class="glass-effect rounded-xl border border-outline-variant/20 p-8 flex flex-col gap-4">
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[28px]">calendar_month</span><h2 class="font-headline-md text-headline-md text-on-surface">Tarih &amp; Saat</h2></div>
+            <p class="text-on-surface-variant">24 Ağustos 2026, Cumartesi</p>
+            <!-- Timeline -->
+            <div class="flex items-center justify-around bg-surface-container-low/50 rounded-lg p-4 mt-2">
+                <div class="text-center"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center mx-auto mb-2"><span class="material-symbols-outlined text-on-primary-container text-[18px]">celebration</span></div><span class="text-xs font-bold text-primary">19:00</span><br/><span class="text-[10px] text-on-surface-variant">Karşılama</span></div>
+                <div class="w-12 border-t-2 border-dashed border-primary/30"></div>
+                <div class="text-center"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mx-auto mb-2"><span class="material-symbols-outlined text-on-primary text-[18px]">favorite</span></div><span class="text-xs font-bold text-primary">20:00</span><br/><span class="text-[10px] text-on-surface-variant">Tören</span></div>
+            </div>
+            <div class="mt-auto flex flex-col gap-2 pt-4">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ela+ve+Can+D%C3%BC%C4%9F%C3%BCn&dates=20260824T160000Z/20260824T210000Z&location=D%C3%BC%C4%9F%C3%BCn+Mekan%C4%B1" target="_blank" class="w-full py-3 border border-primary text-primary font-label-caps text-label-caps rounded-lg hover:bg-primary-container/20 flex items-center justify-center gap-2 transition-colors text-center"><span class="material-symbols-outlined text-[18px]">event</span>TAKVİME EKLE</a>
+                <button onclick="downloadICS()" class="w-full py-3 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-lg hover:bg-surface-container-high flex items-center justify-center gap-2 transition-colors"><span class="material-symbols-outlined text-[18px]">download</span>APPLE TAKVİM</button>
+            </div>
+        </div>
+        <!-- Location Card -->
+        <div class="glass-effect rounded-xl border border-outline-variant/20 p-8 flex flex-col gap-4">
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[28px]">location_on</span><h2 class="font-headline-md text-headline-md text-on-surface">Mekan Bilgisi</h2></div>
+            <p class="text-on-surface font-medium">Düğün Mekanı</p>
+            <p class="text-on-surface-variant text-sm">Kayseri, Türkiye</p>
+            <div class="w-full h-40 rounded-lg overflow-hidden border border-outline-variant/20 mt-2"><iframe src="https://maps.google.com/maps?q=Kayseri+D%C3%BC%C4%9F%C3%BCn+Salonu&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            <div class="mt-auto flex flex-col gap-2 pt-4">
+                <a href="https://maps.google.com" target="_blank" class="w-full py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 flex items-center justify-center gap-2 shadow-sm transition-opacity text-center"><span class="material-symbols-outlined text-[18px]">near_me</span>YOL TARİFİ</a>
+                <a href="https://maps.apple.com" target="_blank" class="w-full py-3 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-lg hover:bg-surface-container-high flex items-center justify-center gap-2 transition-colors text-center"><span class="material-symbols-outlined text-[18px]">map</span>APPLE MAPS</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full py-12 text-center bg-surface-container-low/30 border-t border-outline-variant/20">
+    <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant/50">ELA &amp; CAN — 2026</p>
+</footer>
+
+<script>
+function downloadICS(){const c=['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','DTSTART:20260824T160000Z','DTEND:20260824T210000Z','SUMMARY:Ela ve Can Düğün','LOCATION:Düğün Mekanı, Kayseri','END:VEVENT','END:VCALENDAR'].join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/calendar'}));a.download='dugun.ics';a.click();}
+</script>
+</body></html>

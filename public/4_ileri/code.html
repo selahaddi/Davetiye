@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AYŞE &amp; AHMET // PROTOCOL 2024</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/fonts/geist.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{
+"colors":{"secondary-fixed-dim":"#c6c6c7","on-background":"#e5e2e1","surface-dim":"#131313","on-primary-container":"#006970","surface-container":"#201f1f","background":"#131313","inverse-primary":"#006970","surface-container-high":"#2a2a2a","surface":"#131313","primary-container":"#00f0ff","outline":"#849495","error-container":"#93000a","error":"#ffb4ab","tertiary-fixed":"#e5e2e1","surface-tint":"#00dbe9","on-primary-fixed":"#002022","on-primary":"#00363a","inverse-on-surface":"#313030","on-error":"#690005","primary-fixed-dim":"#00dbe9","on-tertiary":"#313030","on-surface-variant":"#b9cacb","surface-container-low":"#1c1b1b","surface-container-highest":"#353534","on-secondary":"#2f3131","surface-variant":"#353534","primary":"#dbfcff","secondary-container":"#454747","inverse-surface":"#e5e2e1","on-surface":"#e5e2e1","secondary":"#c6c6c7","secondary-fixed":"#e2e2e2","surface-container-lowest":"#0e0e0e","surface-bright":"#3a3939","on-error-container":"#ffdad6","on-secondary-container":"#b4b5b5","tertiary":"#f8f5f5","primary-fixed":"#7df4ff","outline-variant":"#3b494b"},
+"fontFamily":{"label-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"label-sm":["JetBrains Mono"],"headline-lg":["Geist"],"body-md":["Geist"],"headline-md":["Geist"],"display-lg":["Geist"],"body-lg":["Geist"]},
+"fontSize":{"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.05em","fontWeight":"500"}],"display-lg-mobile":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],"display-lg":["64px",{"lineHeight":"72px","letterSpacing":"-0.04em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}
+}}}
+</script>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300;vertical-align:middle}
+.glass-panel{background:rgba(26,26,26,0.4);backdrop-filter:blur(20px);border:1px solid rgba(0,240,255,0.1)}
+.glow-hover:hover{box-shadow:0 0 12px rgba(0,240,255,0.3)}
+.data-strip-accent{border-left:2px solid #00f0ff}
+.data-strip-alt{border-left:2px solid #ffb4ab}
+body{background-color:#131313;color:#e5e2e1;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#131313}::-webkit-scrollbar-thumb{background:#00f0ff}
+.toast{animation:su .5s ease,fo .5s ease 2.5s forwards}
+@keyframes su{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes fo{to{opacity:0}}
+.watermark{position:relative}.watermark::after{content:'TRIAL';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-30deg);font-family:'JetBrains Mono';font-size:1.5rem;font-weight:700;color:rgba(0,240,255,.3);pointer-events:none;letter-spacing:0.2em}
+.masonry{columns:2;column-gap:8px}@media(min-width:768px){.masonry{columns:3}}.masonry>div{break-inside:avoid;margin-bottom:8px}
+</style>
+</head>
+<body class="font-body-md bg-background selection:bg-primary-container selection:text-on-primary-container">
+
+<header class="glass-panel fixed top-0 w-full z-50 flex justify-between items-center px-4 md:px-16 h-16">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container">data_object</span><span class="font-display-lg text-xl tracking-tighter text-on-background">A&amp;A // 2024</span></div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 md:px-8 pt-32 pb-24 space-y-12">
+    <!-- Hero -->
+    <section class="text-center space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 border border-primary-container/30 rounded-full bg-primary-container/5"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-sm text-primary-container">SYSTEM.ONLINE</span></div>
+        <h1 class="font-display-lg text-5xl md:text-7xl tracking-tighter text-on-surface">AYŞE &amp; AHMET</h1>
+        <p class="font-label-md text-on-surface-variant max-w-xl mx-auto">PROTOCOL INITIATED: WEDDING EVENT [24.08.2024]</p>
+        <div class="aspect-video w-full max-w-3xl mx-auto bg-surface-container rounded-xl overflow-hidden border border-outline-variant/30 relative mt-8">
+            <img src="../4/Couple_wedding_photo_shoot_yacht_202607021912.jpeg" class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Data Module: Time & Space -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="glass-panel p-6 data-strip-accent flex flex-col gap-6">
+            <div class="flex items-center gap-3 text-primary-container"><span class="material-symbols-outlined text-[28px]">schedule</span><h2 class="font-headline-md">TIME.SYS</h2></div>
+            <div class="space-y-4">
+                <div><p class="font-label-sm text-outline mb-1">DATE</p><p class="font-label-md text-on-surface">24 AĞUSTOS 2024</p></div>
+                <div class="grid grid-cols-2 gap-4"><div class="bg-surface-container p-3 rounded-lg border border-outline-variant/20"><p class="font-label-sm text-primary-container mb-1">KARŞILAMA</p><p class="font-body-lg text-on-surface">19:00</p></div><div class="bg-surface-container p-3 rounded-lg border border-outline-variant/20"><p class="font-label-sm text-primary-container mb-1">TÖREN</p><p class="font-body-lg text-on-surface">20:00</p></div></div>
+            </div>
+            <a href="https://calendar.google.com" target="_blank" class="mt-auto w-full py-3 bg-primary-container/10 border border-primary-container/30 text-primary-container font-label-md text-center hover:bg-primary-container hover:text-on-primary-container transition-colors"><span class="material-symbols-outlined align-middle mr-2">event</span>SYNC CALENDAR</a>
+        </div>
+        <div class="glass-panel p-6 data-strip-accent flex flex-col gap-6">
+            <div class="flex items-center gap-3 text-primary-container"><span class="material-symbols-outlined text-[28px]">location_on</span><h2 class="font-headline-md">LOC.SYS</h2></div>
+            <div class="space-y-4">
+                <div><p class="font-label-sm text-outline mb-1">VENUE</p><p class="font-label-md text-on-surface">İdeal Moonlight Davet Merkezi</p></div>
+                <div class="h-32 w-full bg-surface-container border border-outline-variant/30 rounded-lg overflow-hidden grayscale"><iframe src="https://maps.google.com/maps?q=Kayseri&t=&z=14&ie=UTF8&output=embed" width="100%" height="100%" style="border:0;"></iframe></div>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="mt-auto w-full py-3 bg-primary-container/10 border border-primary-container/30 text-primary-container font-label-md text-center hover:bg-primary-container hover:text-on-primary-container transition-colors"><span class="material-symbols-outlined align-middle mr-2">near_me</span>NAVIGATE</a>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="flex items-center gap-4 py-4"><div class="flex-1 h-px bg-outline-variant/30"></div><span class="font-label-sm text-outline tracking-[0.2em]">INTERACTION</span><div class="flex-1 h-px bg-outline-variant/30"></div></div>
+
+    <!-- RSVP -->
+    <section class="glass-panel p-8 border-t-2 border-t-primary-container rounded-lg">
+        <div class="mb-6"><h2 class="font-headline-md text-primary-container flex items-center gap-2"><span class="material-symbols-outlined">how_to_reg</span>RSVP.SYS</h2></div>
+        <form id="rf" class="space-y-5" onsubmit="subR(event)">
+            <div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="evet" class="peer hidden" required/><div class="peer-checked:bg-primary-container/20 peer-checked:border-primary-container bg-surface-container border border-outline-variant/30 rounded-lg py-3 text-center transition-all"><span class="font-label-md">ONAY</span></div></label><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="hayir" class="peer hidden"/><div class="peer-checked:bg-error/20 peer-checked:border-error bg-surface-container border border-outline-variant/30 rounded-lg py-3 text-center transition-all"><span class="font-label-md text-error">RED</span></div></label></div>
+            <input type="text" id="rn" required class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none focus:border-primary-container" placeholder="USER.NAME"/>
+            <div class="grid grid-cols-2 gap-4"><input type="number" id="ra" min="1" max="10" value="1" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none" placeholder="ADULTS"/><input type="number" id="rc" min="0" max="10" value="0" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none" placeholder="CHILDREN"/></div>
+            <div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="standart" class="peer hidden" checked/><div class="peer-checked:bg-primary-container/20 peer-checked:border-primary-container bg-surface-container border border-outline-variant/30 rounded-lg py-2 text-center transition-all font-label-md">STD.MENU</div></label><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="vejetaryen" class="peer hidden"/><div class="peer-checked:bg-primary-container/20 peer-checked:border-primary-container bg-surface-container border border-outline-variant/30 rounded-lg py-2 text-center transition-all font-label-md">VEG.MENU</div></label></div>
+            <textarea id="rno" rows="2" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none resize-none" placeholder="DATA.APPEND (Opsiyonel)"></textarea>
+            <button type="submit" id="rb" class="w-full bg-primary-container text-on-primary-container font-label-md py-3 rounded-lg hover:opacity-90 transition-opacity">EXECUTE // GÖNDER</button>
+        </form>
+        <div id="rok" class="hidden text-center py-8 border border-primary-container/30 bg-primary-container/5 rounded-lg"><span class="material-symbols-outlined text-primary-container text-4xl mb-2">check_circle</span><p class="font-label-md text-primary-container">DATA LOGGED SUCCESSFULLY</p></div>
+    </section>
+
+    <!-- Spotify & Whatsapp -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="glass-panel p-6 data-strip-accent"><h3 class="font-headline-md text-primary-container mb-2">AUDIO.REQ</h3>
+            <div class="space-y-4">
+                <input type="text" id="ss" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-2 font-label-md outline-none text-sm" placeholder="Search track..." oninput="searchS(this.value)"/>
+                <div id="sr" class="space-y-2 max-h-32 overflow-y-auto"></div>
+                <div id="sl" class="border border-outline-variant/30 rounded-lg p-3 min-h-[60px] bg-surface-container"><p class="text-outline font-label-sm italic text-center text-xs">Queue is empty...</p></div>
+                <button onclick="subS()" id="sbtn" class="w-full border border-primary-container text-primary-container font-label-md py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container disabled:opacity-30 text-sm" disabled>UPLOAD QUEUE</button>
+            </div>
+        </section>
+        <section class="glass-panel p-6 border-l-2 border-l-primary-container flex flex-col justify-center gap-2"><span class="material-symbols-outlined text-primary-container text-3xl">mark_chat_read</span><h3 class="font-label-md text-on-surface">NOTIFICATION.SYS</h3><p class="font-body-md text-on-surface-variant text-sm">Düğünden 1 gün önce WhatsApp üzerinden otomatik konum ve saat hatırlatma iletisi alacaksınız.</p></section>
+    </div>
+
+    <!-- Divider -->
+    <div class="flex items-center gap-4 py-4"><div class="flex-1 h-px bg-outline-variant/30"></div><span class="font-label-sm text-outline tracking-[0.2em]">PREMIUM</span><div class="flex-1 h-px bg-outline-variant/30"></div></div>
+
+    <!-- Photo Wall -->
+    <section class="glass-panel p-8 border-t-2 border-t-primary-container rounded-lg">
+        <div class="text-center mb-6"><h2 class="font-headline-md text-primary-container">LIVE.FEED</h2><p class="font-label-sm text-outline mt-1">Upload memories to the main frame.</p></div>
+        <div class="flex justify-center mb-6"><div class="w-24 h-24 bg-surface-container border border-primary-container/30 rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-primary-container text-3xl">qr_code_scanner</span></div></div>
+        <label class="w-full bg-primary-container/10 border border-primary-container text-primary-container font-label-md py-3 rounded-lg flex items-center justify-center gap-2 cursor-pointer hover:bg-primary-container hover:text-on-primary-container transition-colors mb-6"><span class="material-symbols-outlined text-[18px]">cloud_upload</span>SELECT MEDIA<input type="file" accept="image/*" multiple class="hidden" onchange="upP(this.files)"/></label>
+        <div id="pg" class="masonry"></div>
+        <p id="pe" class="text-center text-outline font-label-sm italic mt-4">No media detected...</p>
+    </section>
+
+    <!-- Premium Gallery -->
+    <section class="glass-panel p-8 border-t-2 border-t-primary-container rounded-lg">
+        <div class="mb-6 text-center"><h2 class="font-headline-md text-primary-container">STUDIO.ARCHIVE</h2><p class="font-label-sm text-outline mt-1">HQ Photo acquisitions.</p></div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="watermark rounded-lg overflow-hidden aspect-[3/4] bg-surface-container relative group cursor-pointer" onclick="showPM(1)"><img src="../4/Couple_wedding_photo_shoot_yacht_202607021912.jpeg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-primary-container font-label-sm">CREDITS: 49.90</span></div></div>
+            <div class="watermark rounded-lg overflow-hidden aspect-[3/4] bg-surface-container relative group cursor-pointer" onclick="showPM(2)"><img src="../4/Couple_wedding_photo_shoot_yacht_202607021912.jpeg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-primary-container font-label-sm">CREDITS: 49.90</span></div></div>
+            <div class="watermark rounded-lg overflow-hidden aspect-[3/4] bg-surface-container relative group cursor-pointer" onclick="showPM(3)"><img src="../4/Couple_wedding_photo_shoot_yacht_202607021912.jpeg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-primary-container font-label-sm">CREDITS: 49.90</span></div></div>
+        </div>
+    </section>
+
+    <!-- Gift List -->
+    <section class="glass-panel p-8 border-t-2 border-t-primary-container rounded-lg mb-12">
+        <div class="mb-6"><h2 class="font-headline-md text-primary-container">ASSET.TRANSFER</h2></div>
+        <div class="space-y-6">
+            <div class="bg-surface-container rounded-lg p-5 border border-outline-variant/30">
+                <p class="font-label-sm text-outline mb-2">IBAN.REGISTRY</p>
+                <div class="flex items-center gap-2 mt-2"><p class="font-label-md text-primary-container font-mono flex-1">TR00 0000 0000 0000 0000 0000 00</p><button onclick="copyI()" class="bg-primary-container/20 text-primary-container p-2 rounded hover:bg-primary-container hover:text-on-primary-container"><span class="material-symbols-outlined text-[16px]">content_copy</span></button></div>
+            </div>
+            <div>
+                <p class="font-label-sm text-outline mb-3">WISH.LIST</p>
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">kitchen</span><span class="font-label-md">Robotic Arm (Mixer)</span></div><button onclick="resG(this,'Mixer')" class="bg-primary-container/20 text-primary-container border border-primary-container font-label-sm px-4 py-2 rounded">FUND</button></div>
+                    <div class="flex items-center justify-between bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">coffee_maker</span><span class="font-label-md">Coffee Synth</span></div><button onclick="resG(this,'Coffee Synth')" class="bg-primary-container/20 text-primary-container border border-primary-container font-label-sm px-4 py-2 rounded">FUND</button></div>
+                </div>
+            </div>
+            <div class="border-t border-outline-variant/30 pt-6">
+                <p class="font-label-sm text-outline mb-3">TRANSMIT.MESSAGE</p>
+                <form onsubmit="subG(event)" class="space-y-3">
+                    <input type="text" id="gs" required class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none" placeholder="USER.ID"/>
+                    <textarea id="gm" rows="2" class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 font-label-md outline-none resize-none" placeholder="MESSAGE.BODY"></textarea>
+                    <button type="submit" class="w-full bg-primary-container text-on-primary-container font-label-md py-3 rounded-lg hover:opacity-90">TRANSMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Purchase Modal -->
+<div id="pm" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm"><div class="glass-panel p-8 border-t-2 border-primary-container max-w-sm mx-4 text-center"><span class="material-symbols-outlined text-primary-container text-4xl mb-4">shopping_cart</span><h3 class="font-headline-md text-on-surface mb-2">PURCHASE HQ MEDIA</h3><p class="text-outline font-label-md mb-6">49.90 CREDITS</p><div class="flex gap-3"><button onclick="closePM()" class="flex-1 border border-outline-variant text-outline rounded py-2 font-label-md">CANCEL</button><button onclick="buyP()" class="flex-1 bg-primary-container text-on-primary-container rounded py-2 font-label-md">CONFIRM</button></div></div></div>
+
+<div id="tc" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+<footer class="border-t border-outline-variant/20 py-8 text-center text-outline font-label-sm"><p>SYSTEM ID: A&amp;A_2024 // END OF FILE</p></footer>
+
+<script>
+const sb=window.supabase.createClient('https://bwzfhmskhcwbysdkwrtk.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emZobXNraGN3YnlzZGt3cnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NzYwNjEsImV4cCI6MjA5ODU1MjA2MX0.txjA3C2iaca6kKhWnwU4E_l_s0-HgGTkV1fvwEmadVM');
+const SU='https://bwzfhmskhcwbysdkwrtk.supabase.co';
+const T='4_ileri';
+
+async function subR(e){e.preventDefault();document.getElementById('rb').disabled=true;try{await sb.from('rsvp_responses').insert([{attendance:document.querySelector('input[name="att"]:checked')?.value,name:document.getElementById('rn').value,adults:+document.getElementById('ra').value,children:+document.getElementById('rc').value,menu:document.querySelector('input[name="menu"]:checked')?.value,note:document.getElementById('rno').value,template:T}]);document.getElementById('rf').classList.add('hidden');document.getElementById('rok').classList.remove('hidden');toast('RES OK','s');}catch(er){toast('SYS ERR','e');document.getElementById('rb').disabled=false;}}
+
+let songs=[];
+function searchS(q){const r=document.getElementById('sr');if(q.length<2){r.innerHTML='';return;}r.innerHTML=[{n:q+' - Beat',a:'Artist A'},{n:q+' - Synth',a:'Artist B'}].map(s=>`<div class="flex items-center justify-between bg-surface-container border border-outline-variant/30 rounded px-3 py-2 cursor-pointer hover:border-primary-container" onclick="addS('${s.n}','${s.a}')"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-[18px]">music_note</span><span class="font-label-sm">${s.n}</span></div><span class="material-symbols-outlined text-primary-container text-[18px]">add</span></div>`).join('');}
+function addS(n,a){if(songs.find(s=>s.n===n))return;songs.push({n,a});rsl();document.getElementById('ss').value='';document.getElementById('sr').innerHTML='';}
+function remS(i){songs.splice(i,1);rsl();}
+function rsl(){const l=document.getElementById('sl'),b=document.getElementById('sbtn');if(!songs.length){l.innerHTML='<p class="text-outline font-label-sm italic text-center mt-2">Queue is empty...</p>';b.disabled=true;return;}b.disabled=false;l.innerHTML=songs.map((s,i)=>`<div class="flex items-center justify-between bg-primary-container/10 border border-primary-container/20 rounded px-3 py-1 mb-1"><span class="font-label-sm text-primary-container">${s.n}</span><button onclick="remS(${i})" class="text-error"><span class="material-symbols-outlined text-[16px]">close</span></button></div>`).join('');}
+async function subS(){try{await sb.from('song_requests').insert(songs.map(s=>({song_name:s.n,artist:s.a,template:T})));toast('UPLOAD OK','s');songs=[];rsl();}catch(e){toast('SYS ERR','e');}}
+
+async function upP(files){for(const f of files){try{await sb.storage.from('wedding-photos').upload(T+'/'+Date.now()+'_'+f.name,f);}catch(e){}}toast('MEDIA SYNCED','s');loadP();}
+async function loadP(){try{const{data}=await sb.storage.from('wedding-photos').list(T,{limit:50});const g=document.getElementById('pg'),e=document.getElementById('pe');if(!data||!data.length){e?.classList.remove('hidden');return;}e?.classList.add('hidden');g.innerHTML=data.filter(f=>f.name!=='.emptyFolderPlaceholder').map(f=>`<div class="rounded-lg overflow-hidden border border-outline-variant/30"><img src="${SU}/storage/v1/object/public/wedding-photos/${T}/${f.name}" class="w-full object-cover grayscale hover:grayscale-0 transition-all" loading="lazy"/></div>`).join('');}catch(e){}}
+loadP();
+
+let sp=0;function showPM(id){sp=id;document.getElementById('pm').classList.remove('hidden');document.getElementById('pm').classList.add('flex');}
+function closePM(){document.getElementById('pm').classList.add('hidden');document.getElementById('pm').classList.remove('flex');}
+async function buyP(){closePM();toast('REQ SENT','s');try{await sb.from('photo_purchases').insert([{photo_id:sp,template:T}]);}catch(e){}}
+
+function copyI(){navigator.clipboard.writeText('TR00 0000 0000 0000 0000 0000 00');toast('COPIED','s');}
+async function resG(btn,g){btn.disabled=true;btn.textContent='FUNDED';btn.className='bg-outline-variant text-on-surface font-label-sm px-4 py-2 rounded cursor-not-allowed';try{await sb.from('gift_reservations').insert([{gift_name:g,template:T}]);}catch(e){}toast('FUNDED: '+g,'s');}
+async function subG(e){e.preventDefault();try{await sb.from('gift_messages').insert([{sender:document.getElementById('gs').value,message:document.getElementById('gm').value,template:T}]);toast('TRANSMITTED','s');document.getElementById('gs').value='';document.getElementById('gm').value='';}catch(er){toast('SYS ERR','e');}}
+
+function toast(m,t){const d=document.createElement('div');d.className=`toast px-4 py-3 rounded-lg border font-label-md text-sm ${t==='s'?'bg-primary-container/10 border-primary-container text-primary-container':'bg-error/10 border-error text-error'}`;d.textContent=`[${t.toUpperCase()}] ${m}`;document.getElementById('tc').appendChild(d);setTimeout(()=>d.remove(),3000);}
+</script>
+</body></html>

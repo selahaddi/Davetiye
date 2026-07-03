@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="light" lang="tr">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayşe &amp; Ömer | Düğün Davetiyesi (Premium)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script id="tailwind-config">
+      tailwind.config={darkMode:"class",theme:{extend:{
+        "colors":{"secondary-fixed":"#f7e382","surface-container-highest":"#e5e2e0","outline-variant":"#c8c7bf","on-primary-fixed-variant":"#474743","surface-tint":"#5f5e5b","on-primary-fixed":"#1c1c19","primary-container":"#2d2d2a","outline":"#777770","on-tertiary-fixed-variant":"#474743","on-primary-container":"#969490","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#1b1c18","on-tertiary-container":"#95948f","inverse-surface":"#313030","inverse-primary":"#c8c6c2","tertiary":"#181815","primary-fixed":"#e5e2dd","on-tertiary":"#ffffff","surface-container-low":"#f7f3f1","secondary":"#6c5e06","on-secondary-fixed":"#211b00","tertiary-container":"#2c2d29","secondary-fixed-dim":"#dac769","on-surface":"#1c1b1b","primary-fixed-dim":"#c8c6c2","surface-dim":"#ddd9d8","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-surface-variant":"#474741","surface-container-high":"#ebe7e6","primary":"#181916","tertiary-fixed-dim":"#c8c7c1","surface-container":"#f1edec","secondary-container":"#f7e382","on-primary":"#ffffff","on-background":"#1c1b1b","surface":"#fdf8f7","surface-variant":"#e5e2e0","on-secondary":"#ffffff","inverse-on-surface":"#f4f0ef","background":"#fdf8f7","tertiary-fixed":"#e4e2dc","on-secondary-container":"#73640e","surface-bright":"#fdf8f7","on-secondary-fixed-variant":"#524700","on-error":"#ffffff"},
+        "borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","2xl":"1rem","full":"0.75rem","3xl":"1.5rem"},
+        "spacing":{"margin-desktop":"80px","stack-lg":"120px","margin-mobile":"24px","gutter":"24px","stack-sm":"32px","container-max":"1120px","stack-md":"64px","unit":"8px"},
+        "fontFamily":{"body-md":["Inter"],"display-lg":["Playfair Display"],"body-lg":["Inter"],"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-caps":["Inter"]},
+        "fontSize":{"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"300"}],"headline-sm":["24px",{"lineHeight":"1.4","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"1.3","fontWeight":"400"}],"display-lg-mobile":["40px",{"lineHeight":"1.2","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.2","letterSpacing":"0.15em","fontWeight":"600"}]}
+      }}}
+    </script>
+    <style>
+        .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle}
+        body{background-color:#FAFAF8;-webkit-font-smoothing:antialiased}
+        .editorial-shadow{box-shadow:0 4px 20px -2px rgba(0,0,0,0.05)}
+        .gallery-container{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;user-select:none;touch-action:pan-y}
+        .gallery-item{position:absolute;transition:all .4s cubic-bezier(.25,1,.5,1);cursor:pointer;border-radius:9999px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+        .gallery-item img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+        .gallery-item[data-pos="0"]{z-index:10;transform:translateX(0) scale(1);opacity:1}
+        .gallery-item[data-pos="-1"]{z-index:5;transform:translateX(-55%) scale(.85);opacity:.6}
+        .gallery-item[data-pos="1"]{z-index:5;transform:translateX(55%) scale(.85);opacity:.6}
+        .gallery-item[data-pos="-2"],.gallery-item[data-pos="2"]{z-index:1;opacity:0;pointer-events:none}
+        .dot{transition:all .3s ease}.dot.active{width:24px;background-color:#181916}
+        .toast{animation:su .5s ease,fo .5s ease 2.5s forwards}
+        @keyframes su{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+        @keyframes fo{to{opacity:0}}
+        .watermark{position:relative}.watermark::after{content:'ÖRNEK';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-30deg);font-size:1.5rem;font-weight:700;color:rgba(0,0,0,.2);pointer-events:none;letter-spacing:.2em}
+        .masonry{columns:2;column-gap:8px}@media(min-width:768px){.masonry{columns:3}}.masonry>div{break-inside:avoid;margin-bottom:8px}
+    </style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-fixed/30 overflow-x-hidden">
+
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-center px-margin-mobile md:px-margin-desktop h-16"><div class="font-display-lg-mobile text-display-lg-mobile md:text-headline-sm text-primary">Ayşe &amp; Ömer</div></header>
+
+<main class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max pt-24 pb-32 min-h-screen flex flex-col gap-12">
+    <section class="flex flex-col items-center text-center mt-8"><h1 class="font-display-lg text-display-lg md:text-[80px] text-primary tracking-tighter mb-6">Ayşe &amp; Ömer</h1><div class="w-12 h-[1px] bg-outline-variant/50 mb-6"></div><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed px-4">Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz.</p></section>
+
+    <!-- Gallery -->
+    <section class="w-full flex flex-col items-center">
+        <div id="gallery" class="gallery-container w-full h-[350px] md:h-[450px]">
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="0" data-pos="0" draggable="false"><img src="../2/Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="1" draggable="false"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="1" data-pos="1" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="2" draggable="false"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="2" data-pos="2" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="3" draggable="false"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="3" data-pos="-1" draggable="false"><img src="../2/Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="4" draggable="false"></div>
+        </div>
+        <div class="flex gap-2 mt-6" id="gallery-dots"><div class="dot active w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div></div>
+    </section>
+
+    <!-- Details -->
+    <div class="space-y-gutter max-w-4xl mx-auto w-full mt-8">
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="flex flex-col items-center mb-8"><h3 class="font-label-caps text-label-caps text-outline mb-2">TARİH</h3><p class="font-headline-sm text-headline-sm text-primary">24 Ağustos 2026</p><p class="font-body-lg text-on-surface-variant italic">Cumartesi</p></div>
+            <div class="flex justify-center items-center gap-2 md:gap-4 mb-8"><div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-secondary">local_bar</span></div><span class="font-label-caps text-[10px]">KARŞILAMA</span><span class="font-headline-sm text-primary mt-1">19:00</span></div><div class="w-16 md:w-32 border-t-2 border-dashed border-outline-variant mt-[-40px]"></div><div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-secondary">favorite</span></div><span class="font-label-caps text-[10px]">TÖREN</span><span class="font-headline-sm text-primary mt-1">20:00</span></div></div>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn&dates=20260824T160000Z/20260824T210000Z&location=%C4%B0deal+Moonlight" target="_blank" class="w-full py-4 border border-secondary text-secondary font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed/10 flex items-center justify-center gap-2 text-center"><span class="material-symbols-outlined text-[18px]">event</span>AKILLI TAKVİME EKLE</a>
+        </section>
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="flex items-start justify-between mb-6"><div class="flex-1"><h3 class="font-label-caps text-label-caps text-outline mb-4">MEKAN</h3><p class="font-headline-sm text-headline-sm text-primary">İdeal Moonlight Davet Etkinlik Merkezi</p><p class="font-body-lg text-on-surface-variant mt-2">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p></div><div class="bg-secondary-fixed/30 p-3 rounded-full ml-4"><span class="material-symbols-outlined text-secondary">location_on</span></div></div>
+            <div class="mb-6 rounded-xl overflow-hidden h-64 border border-outline-variant/20 shadow-inner"><iframe src="https://maps.google.com/maps?q=%C4%B0deal%20Moonlight%20Davet%20Etkinlik%20Merkezi%2C%20Kayseri&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="w-full py-4 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 flex items-center justify-center gap-2 shadow-sm text-center"><span class="material-symbols-outlined text-[18px]">near_me</span>YOL TARİFİ AL</a>
+        </section>
+    </div>
+
+    <!-- ═══ ORTA SEVİYE ═══ -->
+    <div class="flex items-center justify-center my-4 gap-4"><div class="w-20 h-px bg-outline-variant/40"></div><span class="font-label-caps text-[10px] text-outline tracking-widest">ETKİLEŞİM</span><div class="w-20 h-px bg-outline-variant/40"></div></div>
+
+    <div class="max-w-4xl mx-auto w-full space-y-gutter">
+        <!-- RSVP -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="text-center mb-8"><h3 class="font-label-caps text-label-caps text-outline mb-2">KATILIM</h3><p class="font-headline-sm text-primary">LCV Bildirimi</p></div>
+            <form id="rf" class="space-y-5" onsubmit="subR(event)">
+                <div><div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="evet" class="peer hidden" required/><div class="peer-checked:bg-secondary-fixed peer-checked:border-secondary bg-surface-container-low border border-outline-variant/20 rounded-xl py-4 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">check_circle</span><span class="font-label-caps text-label-caps">KATILACAĞIM</span></div></label><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="hayir" class="peer hidden"/><div class="peer-checked:bg-error-container bg-surface-container-low border border-outline-variant/20 rounded-xl py-4 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">cancel</span><span class="font-label-caps text-label-caps">KATILMAYACAĞIM</span></div></label></div></div>
+                <input type="text" id="rn" required class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none" placeholder="Ad Soyad *"/>
+                <div class="grid grid-cols-2 gap-4"><input type="number" id="ra" min="1" max="10" value="1" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none" placeholder="Yetişkin"/><input type="number" id="rc" min="0" max="10" value="0" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none" placeholder="Çocuk"/></div>
+                <div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="standart" class="peer hidden" checked/><div class="peer-checked:bg-secondary-fixed/50 bg-surface-container-low border border-outline-variant/20 rounded-xl py-3 text-center"><span class="material-symbols-outlined block mx-auto mb-1">restaurant</span><span class="font-label-caps text-[10px]">STANDART</span></div></label><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="vejetaryen" class="peer hidden"/><div class="peer-checked:bg-secondary-fixed/50 bg-surface-container-low border border-outline-variant/20 rounded-xl py-3 text-center"><span class="material-symbols-outlined block mx-auto mb-1">eco</span><span class="font-label-caps text-[10px]">VEJETARYEN</span></div></label></div>
+                <textarea id="rno" rows="2" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none resize-none" placeholder="Not (isteğe bağlı)"></textarea>
+                <button type="submit" id="rb" class="w-full bg-primary text-on-primary font-label-caps py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90"><span class="material-symbols-outlined text-[18px]">send</span>GÖNDER</button>
+            </form>
+            <div id="rok" class="hidden text-center py-8"><span class="material-symbols-outlined text-secondary text-5xl block mb-4">task_alt</span><p class="font-headline-sm text-primary">Teşekkürler!</p></div>
+        </section>
+
+        <!-- WhatsApp + Spotify (same as orta) -->
+        <section class="bg-secondary-fixed/20 border border-secondary/20 rounded-2xl p-6 flex items-start gap-4"><div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-secondary text-[28px]">chat</span></div><div><h3 class="font-label-caps text-label-caps text-primary mb-1">WHATSAPP HATIRLATICI</h3><p class="font-body-md text-on-surface-variant">Düğünden 1 gün önce konum hatırlatması alacaksınız.</p></div></section>
+
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="text-center mb-6"><h3 class="font-label-caps text-label-caps text-outline mb-2">MÜZİK</h3><p class="font-headline-sm text-primary">Şarkı İsteği</p></div>
+            <div class="space-y-4">
+                <div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input type="text" id="ss" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl pl-10 pr-4 py-3 outline-none" placeholder="Şarkı veya sanatçı..." oninput="searchS(this.value)"/></div>
+                <div id="sr" class="space-y-2 max-h-48 overflow-y-auto"></div>
+                <div id="sl"><p class="text-on-surface-variant/50 text-sm italic">Henüz şarkı eklenmedi...</p></div>
+                <button onclick="subS()" id="sbtn" class="w-full border border-secondary text-secondary font-label-caps py-3 rounded-xl flex items-center justify-center gap-2 disabled:opacity-30" disabled><span class="material-symbols-outlined text-[18px]">send</span>GÖNDER</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- ═══ İLERİ SEVİYE ═══ -->
+    <div class="flex items-center justify-center my-4 gap-4"><div class="w-20 h-px bg-secondary/30"></div><span class="font-label-caps text-[10px] text-secondary tracking-widest">PREMİUM</span><div class="w-20 h-px bg-secondary/30"></div></div>
+
+    <div class="max-w-4xl mx-auto w-full space-y-gutter">
+        <!-- Photo Wall -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="text-center mb-6"><h3 class="font-label-caps text-label-caps text-outline mb-2">CANLI</h3><p class="font-headline-sm text-primary">Fotoğraf Duvarı</p><p class="font-body-md text-on-surface-variant mt-2">QR kod ile fotoğraf paylaşın!</p></div>
+            <div class="flex justify-center mb-4"><div class="w-28 h-28 bg-surface-container-low border-2 border-dashed border-outline-variant rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-outline text-3xl">qr_code_2</span></div></div>
+            <label class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 rounded-xl flex items-center justify-center gap-2 cursor-pointer hover:opacity-90 mb-4"><span class="material-symbols-outlined text-[18px]">cloud_upload</span>FOTOĞRAF YÜKLE<input type="file" accept="image/*" multiple class="hidden" onchange="upP(this.files)"/></label>
+            <div id="us"></div>
+            <div id="pg" class="masonry"></div>
+            <p id="pe" class="text-center text-on-surface-variant/50 text-sm italic">Henüz fotoğraf yüklenmedi...</p>
+        </section>
+
+        <!-- Premium Gallery -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="text-center mb-6"><h3 class="font-label-caps text-label-caps text-outline mb-2">STÜDYO</h3><p class="font-headline-sm text-primary">Premium Galeri</p></div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div class="watermark rounded-xl overflow-hidden aspect-[3/4] bg-surface-variant relative group cursor-pointer" onclick="showPM(1)"><img src="../2/Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-white font-label-caps text-[10px]">₺49.90</span></div></div>
+                <div class="watermark rounded-xl overflow-hidden aspect-[3/4] bg-surface-variant relative group cursor-pointer" onclick="showPM(2)"><img src="../2/Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-white font-label-caps text-[10px]">₺49.90</span></div></div>
+                <div class="watermark rounded-xl overflow-hidden aspect-[3/4] bg-surface-variant relative group cursor-pointer" onclick="showPM(3)"><img src="../2/Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-white font-label-caps text-[10px]">₺49.90</span></div></div>
+            </div>
+        </section>
+
+        <!-- Gift List -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
+            <div class="text-center mb-6"><h3 class="font-label-caps text-label-caps text-outline mb-2">HEDİYE</h3><p class="font-headline-sm text-primary">Dijital Takı &amp; Hediye Listesi</p></div>
+            <div class="space-y-6">
+                <div class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/10">
+                    <h4 class="font-label-caps text-[10px] text-outline mb-3">BANKA HESABI</h4>
+                    <p class="text-sm text-on-surface-variant">Hesap Sahibi: <strong class="text-on-surface">Ömer Yılmaz</strong></p>
+                    <div class="flex items-center gap-2 mt-2"><p class="font-label-caps text-[11px] text-on-surface font-mono flex-1" id="ib">TR00 0000 0000 0000 0000 0000 00</p><button onclick="copyI()" class="bg-secondary-fixed text-on-secondary-container p-2 rounded-lg hover:opacity-80"><span class="material-symbols-outlined text-[16px]">content_copy</span></button></div>
+                </div>
+                <div>
+                    <h4 class="font-label-caps text-[10px] text-outline mb-3">İHTİYAÇ LİSTESİ</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between bg-surface-container-low rounded-xl border border-outline-variant/10 px-4 py-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]">kitchen</span><span class="font-body-md">Mutfak Robotu</span></div><button onclick="resG(this,'Mutfak Robotu')" class="bg-primary text-on-primary font-label-caps text-[10px] px-4 py-2 rounded-full">HEDİYE ET</button></div>
+                        <div class="flex items-center justify-between bg-surface-container-low rounded-xl border border-outline-variant/10 px-4 py-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]">coffee_maker</span><span class="font-body-md">Kahve Makinesi</span></div><button onclick="resG(this,'Kahve Makinesi')" class="bg-primary text-on-primary font-label-caps text-[10px] px-4 py-2 rounded-full">HEDİYE ET</button></div>
+                        <div class="flex items-center justify-between bg-surface-container-low rounded-xl border border-outline-variant/10 px-4 py-3"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]">local_laundry_service</span><span class="font-body-md">Robot Süpürge</span></div><button onclick="resG(this,'Robot Süpürge')" class="bg-primary text-on-primary font-label-caps text-[10px] px-4 py-2 rounded-full">HEDİYE ET</button></div>
+                    </div>
+                </div>
+                <div class="border-t border-outline-variant/20 pt-6">
+                    <h4 class="font-label-caps text-[10px] text-outline mb-3">TEBRİK MESAJI</h4>
+                    <form onsubmit="subG(event)" class="space-y-3">
+                        <input type="text" id="gs" required class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none" placeholder="Adınız"/>
+                        <textarea id="gm" rows="2" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none resize-none" placeholder="Mesajınız"></textarea>
+                        <button type="submit" class="w-full bg-secondary text-on-secondary font-label-caps py-3 rounded-xl flex items-center justify-center gap-2 hover:opacity-90"><span class="material-symbols-outlined text-[18px]">send</span>GÖNDER</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="mt-stack-md text-center opacity-40"><div class="w-12 h-px bg-outline-variant mx-auto mb-4"></div><p class="font-label-caps text-[10px] tracking-widest">AYŞE &amp; ÖMER — 2026</p></div>
+</main>
+
+<!-- Purchase Modal -->
+<div id="pm" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm"><div class="bg-surface rounded-2xl border border-outline-variant/20 p-8 max-w-sm mx-4 text-center shadow-2xl"><span class="material-symbols-outlined text-secondary text-5xl mb-4 block">shopping_cart</span><h3 class="font-headline-sm text-primary mb-2">Fotoğraf Satın Al</h3><p class="text-on-surface-variant mb-4">₺49.90 — Filigransız yüksek çözünürlük</p><div class="flex gap-3"><button onclick="closePM()" class="flex-1 border border-outline-variant rounded-xl py-3 font-label-caps text-label-caps">VAZGEÇ</button><button onclick="buyP()" class="flex-1 bg-primary text-on-primary rounded-xl py-3 font-label-caps text-label-caps">SATIN AL</button></div></div></div>
+
+<div class="fixed inset-0 pointer-events-none -z-10 bg-[#FAFAF8]"><div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary-fixed/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div></div>
+<div id="tc" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"></div>
+
+<script>
+    const sb=window.supabase.createClient('https://bwzfhmskhcwbysdkwrtk.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emZobXNraGN3YnlzZGt3cnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NzYwNjEsImV4cCI6MjA5ODU1MjA2MX0.txjA3C2iaca6kKhWnwU4E_l_s0-HgGTkV1fvwEmadVM');
+    const SU='https://bwzfhmskhcwbysdkwrtk.supabase.co';
+
+    // Gallery
+    document.addEventListener('DOMContentLoaded',()=>{const g=document.getElementById('gallery'),items=document.querySelectorAll('.gallery-item'),dots=document.querySelectorAll('.dot'),n=items.length;let ci=0,sx=0,dr=false,ct=0;
+    function ug(){items.forEach((it,i)=>{let d=i-ci;if(d<-1)d+=n;if(d>1&&n>3){if(d===n-1)d=-1;else d=2;}it.setAttribute('data-pos',d);});dots.forEach((d,i)=>{i===ci?d.classList.add('active'):d.classList.remove('active');});}
+    function sh(dir){ci=dir==='l'?(ci+1)%n:(ci-1+n)%n;ug();}
+    items.forEach((it,i)=>{it.addEventListener('click',()=>{if(ci===i)return;let d=i-ci;if(d<-1)d+=n;if(d===n-1)d=-1;if(d===1)sh('l');else if(d===-1)sh('r');else{ci=i;ug();}});});
+    dots.forEach((d,i)=>{d.addEventListener('click',()=>{ci=i;ug();});});
+    g.addEventListener('mousedown',e=>{dr=true;sx=e.pageX;});g.addEventListener('touchstart',e=>{dr=true;sx=e.touches[0].clientX;},{passive:true});
+    window.addEventListener('mouseup',()=>{if(!dr)return;dr=false;if(ct<-50)sh('r');else if(ct>50)sh('l');ct=0;});window.addEventListener('touchend',()=>{if(!dr)return;dr=false;if(ct<-50)sh('r');else if(ct>50)sh('l');ct=0;});
+    window.addEventListener('mousemove',e=>{if(dr)ct=e.pageX-sx;});window.addEventListener('touchmove',e=>{if(dr)ct=e.touches[0].clientX-sx;},{passive:true});
+    ug();});
+
+    // RSVP
+    async function subR(e){e.preventDefault();const b=document.getElementById('rb');b.disabled=true;try{await sb.from('rsvp_responses').insert([{attendance:document.querySelector('input[name="att"]:checked')?.value,name:document.getElementById('rn').value,adults:+document.getElementById('ra').value,children:+document.getElementById('rc').value,menu:document.querySelector('input[name="menu"]:checked')?.value,note:document.getElementById('rno').value,template:'2_ileri'}]);document.getElementById('rf').classList.add('hidden');document.getElementById('rok').classList.remove('hidden');toast('Kaydedildi!','s');}catch(er){toast('Hata.','e');b.disabled=false;}}
+
+    // Spotify
+    let songs=[];
+    function searchS(q){const r=document.getElementById('sr');if(q.length<2){r.innerHTML='';return;}r.innerHTML=[{n:q+' - Aşk',a:'Sanatçı 1'},{n:q+' - Dans',a:'Sanatçı 2'}].map(s=>`<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-4 py-3 hover:bg-surface-container-high cursor-pointer" onclick="addS('${s.n}','${s.a}')"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]">music_note</span><div><p class="font-label-caps text-[11px]">${s.n}</p><p class="text-xs text-on-surface-variant">${s.a}</p></div></div><span class="material-symbols-outlined text-secondary">add_circle</span></div>`).join('');}
+    function addS(n,a){if(songs.find(s=>s.n===n))return;songs.push({n,a});rsl();document.getElementById('ss').value='';document.getElementById('sr').innerHTML='';}
+    function remS(i){songs.splice(i,1);rsl();}
+    function rsl(){const l=document.getElementById('sl'),b=document.getElementById('sbtn');if(!songs.length){l.innerHTML='<p class="text-on-surface-variant/50 text-sm italic">Henüz şarkı eklenmedi...</p>';b.disabled=true;return;}b.disabled=false;l.innerHTML=songs.map((s,i)=>`<div class="flex items-center justify-between bg-secondary-fixed/20 rounded-xl px-4 py-3 mb-2"><div><p class="font-label-caps text-[11px]">${i+1}. ${s.n}</p></div><button onclick="remS(${i})" class="text-error"><span class="material-symbols-outlined text-[18px]">close</span></button></div>`).join('');}
+    async function subS(){try{await sb.from('song_requests').insert(songs.map(s=>({song_name:s.n,artist:s.a,template:'2_ileri'})));toast('Şarkılar kaydedildi!','s');songs=[];rsl();}catch(e){toast('Hata.','e');}}
+
+    // Photo Wall
+    async function upP(files){document.getElementById('us').innerHTML='<p class="text-secondary text-sm animate-pulse text-center">Yükleniyor...</p>';for(const f of files){try{await sb.storage.from('wedding-photos').upload('2_ileri/'+Date.now()+'_'+f.name,f);}catch(e){console.error(e);}}document.getElementById('us').innerHTML='';toast('Yüklendi! 📸','s');loadP();}
+    async function loadP(){try{const{data}=await sb.storage.from('wedding-photos').list('2_ileri',{limit:50});const g=document.getElementById('pg'),e=document.getElementById('pe');if(!data||!data.length){e.classList.remove('hidden');return;}e.classList.add('hidden');g.innerHTML=data.filter(f=>f.name!=='.emptyFolderPlaceholder').map(f=>`<div class="rounded-xl overflow-hidden"><img src="${SU}/storage/v1/object/public/wedding-photos/2_ileri/${f.name}" class="w-full object-cover" loading="lazy"/></div>`).join('');}catch(e){console.error(e);}}
+    loadP();
+
+    // Premium Gallery
+    let sp=0;function showPM(id){sp=id;const m=document.getElementById('pm');m.classList.remove('hidden');m.classList.add('flex');}
+    function closePM(){document.getElementById('pm').classList.add('hidden');document.getElementById('pm').classList.remove('flex');}
+    async function buyP(){closePM();toast('Satın alma isteği alındı!','s');try{await sb.from('photo_purchases').insert([{photo_id:sp,template:'2_ileri'}]);}catch(e){}}
+
+    // Gift
+    function copyI(){navigator.clipboard.writeText('TR00 0000 0000 0000 0000 0000 00');toast('IBAN kopyalandı!','s');}
+    async function resG(btn,g){btn.disabled=true;btn.textContent='ALINDI ✓';btn.className='bg-outline-variant text-on-surface font-label-caps text-[10px] px-4 py-2 rounded-full cursor-not-allowed';try{await sb.from('gift_reservations').insert([{gift_name:g,template:'2_ileri'}]);}catch(e){}toast(g+' hediye olarak işaretlendi!','s');}
+    async function subG(e){e.preventDefault();try{await sb.from('gift_messages').insert([{sender:document.getElementById('gs').value,message:document.getElementById('gm').value,template:'2_ileri'}]);toast('Mesaj gönderildi! 💛','s');document.getElementById('gs').value='';document.getElementById('gm').value='';}catch(er){toast('Hata.','e');}}
+
+    function toast(m,t){const d=document.createElement('div');d.className=`toast px-6 py-3 rounded-xl shadow-lg font-label-caps text-label-caps ${t==='s'?'bg-primary text-on-primary':'bg-error text-on-error'}`;d.textContent=m;document.getElementById('tc').appendChild(d);setTimeout(()=>d.remove(),3000);}
+</script>
+</body>
+</html>

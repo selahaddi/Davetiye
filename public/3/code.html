@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&amp;family=Work+Sans:wght@400;600&amp;family=Playfair+Display:ital,wght@0,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#6b6450",
+            "primary-container": "#8fb9aa",
+            "on-secondary-fixed-variant": "#4c4634",
+            "surface-variant": "#cae8e8",
+            "surface-container-low": "#dbfaf9",
+            "primary": "#3e6659",
+            "surface-container-highest": "#cae8e8",
+            "on-tertiary-fixed": "#380d00",
+            "outline": "#717975",
+            "on-tertiary-fixed-variant": "#6f3720",
+            "on-primary": "#ffffff",
+            "outline-variant": "#c0c8c4",
+            "on-secondary": "#ffffff",
+            "background": "#e2ffff",
+            "inverse-on-surface": "#d8f7f6",
+            "surface-tint": "#3e6659",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#cfc6ae",
+            "surface-container": "#d5f4f4",
+            "secondary-fixed": "#ece2c9",
+            "surface-container-high": "#d0eeee",
+            "primary-fixed": "#c0ecdc",
+            "on-primary-fixed": "#002018",
+            "on-background": "#022020",
+            "tertiary-fixed": "#ffdbce",
+            "surface": "#e2ffff",
+            "on-surface-variant": "#414845",
+            "surface-bright": "#e2ffff",
+            "on-surface": "#022020",
+            "inverse-primary": "#a5d0c0",
+            "inverse-surface": "#193535",
+            "on-secondary-fixed": "#201b0c",
+            "tertiary-container": "#ec9d80",
+            "tertiary": "#8c4e35",
+            "secondary-container": "#ece2c9",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#264e42",
+            "tertiary-fixed-dim": "#ffb59a",
+            "secondary": "#645e4b",
+            "primary-fixed-dim": "#a5d0c0",
+            "on-primary-container": "#224a3f",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#6b341d",
+            "error": "#ba1a1a",
+            "surface-dim": "#c2e0e0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "24px",
+            "unit": "8px",
+            "margin-mobile": "24px",
+            "section-gap": "80px",
+            "margin-desktop": "64px"
+          },
+          "fontFamily": {
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-caps": ["Work Sans"],
+            "display-lg-mobile": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Work Sans"],
+            "body-md": ["Work Sans"],
+            "serif-elegant": ["Playfair Display", "serif"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+            "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "300"}],
+            "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+    body {
+      background-color: #e2ffff;
+      color: #022020;
+      scroll-behavior: smooth;
+    }
+    .glass-effect {
+      background: rgba(226, 255, 255, 0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .hero-mask {
+      mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
+    .wave-float {
+      animation: wave 8s ease-in-out infinite;
+    }
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    .fade-in-up {
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body class="antialiased">
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Hero Resim" class="w-full h-full object-contain object-top hero-mask" src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80 z-10 pointer-events-none"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 text-center max-w-4xl fade-in-up mt-20">
+<span class="font-label-caps text-label-caps tracking-[0.3em] text-primary mb-6 block">TARİHİ KAYDEDİN</span>
+<h2 class="font-serif-elegant italic text-6xl md:text-8xl lg:text-9xl text-primary mb-8 leading-tight">
+          Ayşe &amp; Ahmet
+        </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span class="font-body-lg text-body-lg">24 Ağustos 2026</span>
+</div>
+<div class="hidden md:block w-px h-8 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-body-lg text-body-lg">Coastal Serenity Beach Club, İzmir</span>
+</div>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-white/40 backdrop-blur-md border border-white/60 text-primary font-body-lg text-body-lg px-10 py-4 rounded-full hover:bg-white/60 transition-all duration-300 inline-block" href="#details">
+            Düğün Detaylarını Gör
+          </a>
+</div>
+</div>
+<!-- Floating Element Decoration -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 wave-float hidden md:block z-10">
+<span class="material-symbols-outlined text-primary opacity-40 text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Bento Grid Section: Hikayemiz -->
+<section class="py-section-gap max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Text Card -->
+<div class="md:col-span-5 bg-surface-container-low rounded-xl p-10 flex flex-col justify-center shadow-[0_8px_32px_0_rgba(62,102,89,0.03)] border border-white/50">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Sahil Huzurumuz</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+            Gelgitlerin sürekli kıyıya döndüğü gibi, sevgimiz de ritmik bir zarafetle büyüdü. Birbirimizde bulduğumuz huzuru yansıtan bir yerde sonsuzluğumuzun başlangıcına tanık olmaya sizi davet ediyoruz.
+          </p>
+<p class="font-serif-elegant italic text-primary text-xl">"Ufuk kadar engin, deniz kadar derin bir sevgi."</p>
+</div>
+<!-- Image Card 1 -->
+<div class="md:col-span-7 h-96 relative overflow-hidden rounded-xl shadow-lg">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="A serene wide-angle shot of a minimalist beach wedding setup during the golden hour. The scene features light wooden chairs arranged on fine white sand, a simple arch draped in sheer seafoam green fabric, and the calm turquoise ocean in the background. The lighting is soft and warm, capturing a peaceful, coastal serenity aesthetic with a palette of sandy beige and muted greens." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAI6NaoRofgBJc1VEt5MnvlAkfQtRSbmE4mhLulV3N05gtWYewLVx6X1VbGv12XcL692Qel5eBMuWGF0HU7wg-Gk45Ogq8bptT8qoUUmsJRf10RuAFrCDZ7h2-Qr8D9xH50pcY0PevvaUyOMlqrn1UFK3E-4Rm-V9KUsx6-egg6XKb51pkUFsDathqbzkAT9vN9QSGzuxi9J2Hpor7g4ewCBTypZq9z7L7pWyq5bYNfnk914r0oDauYEWBZaf_Zjoyah43FKN7YBqU')"></div>
+<div class="absolute bottom-6 left-6 text-white bg-black/20 backdrop-blur-md px-4 py-2 rounded-lg">
+<p class="font-label-caps text-label-caps">MEKAN</p>
+</div>
+</div>
+<!-- Image Card 2 -->
+<div class="md:col-span-4 h-80 relative overflow-hidden rounded-xl shadow-lg">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Close-up shot of two delicate wedding bands resting on a smooth, rounded beach stone. The stone sits amongst fine sand and tiny white shells. The lighting is bright and airy, reflecting the seafoam and sand color palette. The mood is intimate and tranquil, emphasizing the natural textures of the shoreline and the elegance of the rings." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXDuhDPNz3wG8sC6eDcbITJ_4BrMwkL7gfpN5tsaDcgaA3VaDJsIKJjpOxE99dH6yxnRsDZ7oNbXV24nIx3YZe6wc4jvUx7HB5H9vZd5AoZg6h1AiOkUrF2Jq1w_0pj8du8n15xRTV93fVVpnrtDO1BNLI56jpCF3HuqUDAayCpdE5-ABMY-_Y_8_VN2S__ByNXNjjQoD_dA7-rh-XLUcvEfqbEUvXPWuVs4c2V4LNcmFEPZkJ3WwlyStj9kTnqwvBds53Tmo_-Rg')"></div>
+</div>
+<!-- Animation Card -->
+<div class="md:col-span-8 bg-primary-fixed-dim rounded-xl p-1 relative overflow-hidden min-h-[320px] shadow-lg">
+<div class="absolute inset-0 opacity-40 mix-blend-overlay">
+<div class="bg-gradient-to-br from-primary-container to-surface-variant h-full w-full"></div>
+</div>
+<div class="relative z-10 h-full w-full flex flex-col items-center justify-center text-center p-8">
+<span class="material-symbols-outlined text-on-primary-fixed-variant text-6xl mb-4">tsunami</span>
+<h4 class="font-headline-md text-headline-md text-on-primary-fixed mb-2">Bizim Ritmimiz</h4>
+<p class="font-body-md text-on-primary-fixed-variant max-w-md">Her dalga yeni bir anı getiriyor. Ortak yolculuğumuzu ve geleceğimizi kutlarken bize katılın.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="py-section-gap bg-surface-container-highest/30" id="details">
+<div class="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 tracking-widest">NE ZAMAN &amp; NEREDE</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+<!-- Item 1 -->
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 group-hover:bg-primary-container/40 transition-colors duration-500">
+<span class="material-symbols-outlined text-primary">diversity_1</span>
+</div>
+<p class="font-label-caps text-label-caps text-on-secondary-fixed-variant mb-2">17:00</p>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">Tören</h5>
+<p class="font-body-md text-on-surface-variant">Birlikteliğimiz için Kuzey Kıyısı Güvertesinde toplanıyoruz.</p>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 group-hover:bg-primary-container/40 transition-colors duration-500">
+<span class="material-symbols-outlined text-primary">local_bar</span>
+</div>
+<p class="font-label-caps text-label-caps text-on-secondary-fixed-variant mb-2">18:30</p>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">Gün Batımı Kutlaması</h5>
+<p class="font-body-md text-on-surface-variant">Güneş ufukla buluşurken kokteyl ve müzik.</p>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col items-center group">
+<div class="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 group-hover:bg-primary-container/40 transition-colors duration-500">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<p class="font-label-caps text-label-caps text-on-secondary-fixed-variant mb-2">20:00</p>
+<h5 class="font-headline-md text-headline-md text-primary mb-2">Deniz Kenarı Akşam Yemeği</h5>
+<p class="font-body-md text-on-surface-variant">Yıldızların altında servis edilen organik ve yöresel bir menü.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component Strategy) -->
+<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-section-gap">
+<div class="flex flex-col items-center gap-unit px-margin-desktop w-full max-w-7xl mx-auto">
+<span class="font-label-caps text-label-caps text-secondary">Sevgilerimizle, Ayşe &amp; Ahmet — 2026</span>
+<div class="flex flex-wrap justify-center gap-8 my-8">
+<a class="text-on-secondary-fixed-variant font-body-md text-body-md hover:text-primary transition-all duration-300" href="#">Hikayemiz</a>
+<a class="text-on-secondary-fixed-variant font-body-md text-body-md hover:text-primary transition-all duration-300" href="#">Galeri</a>
+<a class="text-on-secondary-fixed-variant font-body-md text-body-md hover:text-primary transition-all duration-300" href="#">Mekan</a>
+</div>
+<div class="flex gap-6 mt-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl">photo_camera</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+</div>
+</div>
+<p class="mt-12 text-on-surface-variant/40 font-label-caps text-[10px] tracking-widest">DENİZİN IŞILTISIYLA AYDINLANDI</p>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayşe & Ömer - Düğün Davetiyemiz</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#ffb59c",
+                        "tertiary-fixed": "#e6e2dd",
+                        "surface-container-highest": "#e9e1dc",
+                        "surface-container-low": "#fbf2ed",
+                        "on-surface-variant": "#55433d",
+                        "tertiary-container": "#767470",
+                        "primary-container": "#b45c3d",
+                        "primary": "#954427",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#484743",
+                        "on-secondary-fixed": "#121f06",
+                        "primary-fixed": "#ffdbcf",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#793014",
+                        "primary-fixed-dim": "#ffb59c",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e9e1dc",
+                        "background": "#fff8f5",
+                        "tertiary-fixed-dim": "#c9c6c1",
+                        "surface": "#fff8f5",
+                        "secondary-fixed": "#d6e9c0",
+                        "outline": "#88726c",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#efe6e2",
+                        "inverse-on-surface": "#f8efea",
+                        "secondary-container": "#d3e6bd",
+                        "surface-dim": "#e1d8d4",
+                        "on-secondary-fixed-variant": "#3c4b2d",
+                        "on-background": "#1e1b18",
+                        "surface-container": "#f5ece7",
+                        "secondary": "#536343",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "secondary-fixed-dim": "#bacda5",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "on-primary-fixed": "#390c00",
+                        "on-primary-container": "#fffbff",
+                        "surface-tint": "#984629",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#dbc1b9",
+                        "tertiary": "#5d5c58",
+                        "surface-bright": "#fff8f5",
+                        "on-secondary-container": "#576847",
+                        "on-surface": "#1e1b18",
+                        "inverse-surface": "#34302c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1120px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Work Sans"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["\"Source Serif 4\""],
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["\"Source Serif 4\""],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+</script>
+<style>
+    .letterpress { border: 1px solid rgba(136, 114, 108, 0.2); }
+    .soft-image { border-radius: 40px 12px 40px 12px; }
+    .grain-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        z-index: 0;
+    }
+    body { min-height: 100dvh; scroll-behavior: smooth; }
+    
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-25%); } /* 4 set kullanacağımız için %25 kaydırma tam 1 seti bitirir */
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover {
+        animation-play-state: paused;
+    }
+</style>
+</head>
+<body class="bg-primary text-on-primary font-body-md antialiased flex flex-col relative overflow-x-hidden">
+
+<div class="grain-overlay"></div>
+
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center py-20 px-margin-mobile md:px-margin-desktop relative z-10 w-full max-w-container-max mx-auto space-y-16">
+    
+    <!-- Hero Section -->
+    <div class="text-center space-y-8 max-w-2xl mx-auto w-full">
+        <p class="font-label-md text-label-md uppercase tracking-widest text-on-primary/70">Sizi Düğünümüze Davet Ediyoruz</p>
+        <h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-primary leading-tight">
+            Ayşe <span class="text-on-primary/60 italic font-body-lg text-body-lg md:text-[32px] mx-2">&amp;</span> Ömer
+        </h2>
+        <p class="font-body-md text-body-md text-on-primary/90 px-4 leading-relaxed">
+            Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz. Sevgi, kahkaha ve unutulmaz anılarla dolu bu günde yanımızda olmanız dileğiyle.
+        </p>
+    </div>
+
+    <!-- Gallery Section (Sonsuz Kayan Şerit) -->
+    <div class="w-screen max-w-none shrink-0 overflow-hidden relative group py-4">
+
+
+        <div class="animate-marquee gap-4 md:gap-8 px-2 md:px-4">
+            <!-- Set 1 -->
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <!-- Set 2 -->
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <!-- Set 3 -->
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <!-- Set 4 -->
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+            <div class="w-[280px] md:w-[400px] flex-shrink-0">
+                <div class="aspect-[3/4] letterpress p-2 bg-background/5 rounded-[48px_16px_48px_16px] shadow-sm">
+                    <img draggable="false" class="w-full h-full object-cover soft-image select-none pointer-events-none" src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Ayşe & Ömer Galeri" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Date & Time Section -->
+    <div class="w-full max-w-md mx-auto p-8 bg-surface-container/40 rounded-[32px] backdrop-blur-md border border-outline/10 text-center shadow-lg transition-transform hover:-translate-y-1 duration-300">
+        <div class="mb-4 text-secondary">
+            <span class="material-symbols-outlined text-4xl">calendar_today</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">24 Ağustos 2026</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-8 uppercase tracking-widest font-semibold">Cumartesi</p>
+        
+        <!-- Timeline -->
+        <div class="flex items-center justify-between max-w-[200px] mx-auto mb-10 relative">
+            <div class="absolute top-1/2 left-0 w-full h-[1px] border-t-2 border-dashed border-outline/30 -z-10"></div>
+            
+            <div class="flex flex-col items-center bg-surface-container-low px-3 py-2 rounded-xl shadow-sm border border-outline/5">
+                <span class="material-symbols-outlined text-secondary mb-1">local_cafe</span>
+                <span class="font-label-md text-sm text-on-surface font-bold">19:00</span>
+                <span class="font-label-md text-[10px] uppercase text-on-surface-variant mt-1">Karşılama</span>
+            </div>
+            
+            <div class="flex flex-col items-center bg-surface-container-low px-3 py-2 rounded-xl shadow-sm border border-outline/5">
+                <span class="material-symbols-outlined text-secondary mb-1">favorite</span>
+                <span class="font-label-md text-sm text-on-surface font-bold">20:00</span>
+                <span class="font-label-md text-[10px] uppercase text-on-surface-variant mt-1">Tören</span>
+            </div>
+        </div>
+
+        <!-- Add to Calendar Button -->
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn&dates=20260824T160000Z/20260824T210000Z&details=Hayat%C4%B1m%C4%B1z%C4%B1+birle%C5%9Ftirdi%C4%9Fimiz+bu+%C3%B6zel+g%C3%BCn%C3%BC+sizinle+payla%C5%9Fmaktan+b%C3%BCy%C3%BCk+mutluluk+duyuyoruz.&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi" target="_blank" class="bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-widest px-6 py-4 rounded-full hover:bg-secondary/90 transition-all active:scale-95 shadow-sm inline-flex items-center gap-2 w-full justify-center group">
+            <span>Akıllı Takvime Ekle</span>
+            <span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">event_available</span>
+        </a>
+    </div>
+
+    <!-- Location Section -->
+    <div class="w-full max-w-md mx-auto p-8 bg-surface-container/40 rounded-[32px] backdrop-blur-md border border-outline/10 text-center shadow-lg transition-transform hover:-translate-y-1 duration-300">
+        <div class="mb-4 text-secondary">
+            <span class="material-symbols-outlined text-4xl">location_on</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">İdeal Moonlight Davet<br>Etkinlik Merkezi</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 text-sm">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p>
+        
+        <!-- Google Maps iframe -->
+        <div class="w-full rounded-2xl overflow-hidden mb-8 aspect-video border border-outline/10 shadow-inner">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.882470764724!2d35.5132338!3d38.6975239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b11d9d93ebbc9%3A0x6d9006e2f12ff692!2zxLBkZWFsIE1vb25saWdodCBEYXZldCBF0YJraW5saWsgTWVya2V6aQ!5e0!3m2!1sen!2str!4v1700000000000!5m2!1sen!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Map Link -->
+        <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest px-6 py-4 rounded-full hover:bg-primary/90 transition-all active:scale-95 shadow-sm inline-flex items-center gap-2 w-full justify-center group">
+            <span>Yol Tarifi Al</span>
+            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">directions</span>
+        </a>
+    </div>
+
+    <!-- Footer Space -->
+    <div class="h-12 w-full"></div>
+
+</main>
+
+
+
+</body>
+</html>
