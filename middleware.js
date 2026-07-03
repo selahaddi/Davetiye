@@ -62,8 +62,21 @@ export async function middleware(req) {
     }
 
     // Bulunduysa: Arka planda ilgili klasördeki code.html'i render et
-    // Örn: public/4_ileri/code.html
-    url.pathname = `/${couple.template_id}/code.html`;
+    const templatePaths = {
+      '1': 'davetiye_giri/code.html',
+      '2': 'code.html',
+      '3': 'code.html',
+      '4': 'stitch_minimalist_editorial_wedding_invitation/code.html',
+      '5': 'code.html',
+      '6': 'AA/code.html',
+      '7': 'code.html'
+    };
+    
+    // template_id '1_baslangic' gibi olabilir, o yüzden sadece başındaki sayıyı alıyoruz
+    const baseTemplate = couple.template_id.split('_')[0]; 
+    const subPath = templatePaths[baseTemplate] || 'code.html';
+    
+    url.pathname = `/${couple.template_id}/${subPath}`;
     return NextResponse.rewrite(url);
 
   } catch (err) {

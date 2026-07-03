@@ -1,152 +1,462 @@
 <!DOCTYPE html>
 <html class="light" lang="tr">
 <head>
-    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ayşe &amp; Ömer | Düğün Davetiyesi</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayşe & Ömer | Düğün Davetiyesi</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <script id="tailwind-config">
-      tailwind.config={darkMode:"class",theme:{extend:{
-        "colors":{"secondary-fixed":"#f7e382","surface-container-highest":"#e5e2e0","outline-variant":"#c8c7bf","on-primary-fixed-variant":"#474743","surface-tint":"#5f5e5b","on-primary-fixed":"#1c1c19","primary-container":"#2d2d2a","outline":"#777770","on-tertiary-fixed-variant":"#474743","on-primary-container":"#969490","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#1b1c18","on-tertiary-container":"#95948f","inverse-surface":"#313030","inverse-primary":"#c8c6c2","tertiary":"#181815","primary-fixed":"#e5e2dd","on-tertiary":"#ffffff","surface-container-low":"#f7f3f1","secondary":"#6c5e06","on-secondary-fixed":"#211b00","tertiary-container":"#2c2d29","secondary-fixed-dim":"#dac769","on-surface":"#1c1b1b","primary-fixed-dim":"#c8c6c2","surface-dim":"#ddd9d8","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-surface-variant":"#474741","surface-container-high":"#ebe7e6","primary":"#181916","tertiary-fixed-dim":"#c8c7c1","surface-container":"#f1edec","secondary-container":"#f7e382","on-primary":"#ffffff","on-background":"#1c1b1b","surface":"#fdf8f7","surface-variant":"#e5e2e0","on-secondary":"#ffffff","inverse-on-surface":"#f4f0ef","background":"#fdf8f7","tertiary-fixed":"#e4e2dc","on-secondary-container":"#73640e","surface-bright":"#fdf8f7","on-secondary-fixed-variant":"#524700","on-error":"#ffffff"},
-        "borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","2xl":"1rem","full":"0.75rem","3xl":"1.5rem"},
-        "spacing":{"margin-desktop":"80px","stack-lg":"120px","margin-mobile":"24px","gutter":"24px","stack-sm":"32px","container-max":"1120px","stack-md":"64px","unit":"8px"},
-        "fontFamily":{"body-md":["Inter"],"display-lg":["Playfair Display"],"body-lg":["Inter"],"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-caps":["Inter"]},
-        "fontSize":{"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"300"}],"headline-sm":["24px",{"lineHeight":"1.4","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"1.3","fontWeight":"400"}],"display-lg-mobile":["40px",{"lineHeight":"1.2","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.2","letterSpacing":"0.15em","fontWeight":"600"}]}
-      }}}
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#f7e382",
+                    "surface-container-highest": "#e5e2e0",
+                    "outline-variant": "#c8c7bf",
+                    "on-primary-fixed-variant": "#474743",
+                    "surface-tint": "#5f5e5b",
+                    "on-primary-fixed": "#1c1c19",
+                    "primary-container": "#2d2d2a",
+                    "outline": "#777770",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "on-primary-container": "#969490",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1b1c18",
+                    "on-tertiary-container": "#95948f",
+                    "inverse-surface": "#313030",
+                    "inverse-primary": "#c8c6c2",
+                    "tertiary": "#181815",
+                    "primary-fixed": "#e5e2dd",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f7f3f1",
+                    "secondary": "#6c5e06",
+                    "on-secondary-fixed": "#211b00",
+                    "tertiary-container": "#2c2d29",
+                    "secondary-fixed-dim": "#dac769",
+                    "on-surface": "#1c1b1b",
+                    "primary-fixed-dim": "#c8c6c2",
+                    "surface-dim": "#ddd9d8",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#474741",
+                    "surface-container-high": "#ebe7e6",
+                    "primary": "#181916",
+                    "tertiary-fixed-dim": "#c8c7c1",
+                    "surface-container": "#f1edec",
+                    "secondary-container": "#f7e382",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1b1b",
+                    "surface": "#fdf8f7",
+                    "surface-variant": "#e5e2e0",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f4f0ef",
+                    "background": "#fdf8f7",
+                    "tertiary-fixed": "#e4e2dc",
+                    "on-secondary-container": "#73640e",
+                    "surface-bright": "#fdf8f7",
+                    "on-secondary-fixed-variant": "#524700",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "2xl": "1rem",
+                    "full": "0.75rem",
+                    "3xl": "1.5rem"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "stack-lg": "120px",
+                    "margin-mobile": "24px",
+                    "gutter": "24px",
+                    "stack-sm": "32px",
+                    "container-max": "1120px",
+                    "stack-md": "64px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
     </script>
     <style>
-        .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;vertical-align:middle}
-        body{background-color:#FAFAF8;-webkit-font-smoothing:antialiased}
-        .editorial-shadow{box-shadow:0 4px 20px -2px rgba(0,0,0,0.05)}
-        .gallery-container{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;user-select:none;touch-action:pan-y}
-        .gallery-item{position:absolute;transition:all .4s cubic-bezier(.25,1,.5,1);cursor:pointer;border-radius:9999px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-        .gallery-item img{width:100%;height:100%;object-fit:cover;pointer-events:none}
-        .gallery-item[data-pos="0"]{z-index:10;transform:translateX(0) scale(1);opacity:1}
-        .gallery-item[data-pos="-1"]{z-index:5;transform:translateX(-55%) scale(.85);opacity:.6}
-        .gallery-item[data-pos="1"]{z-index:5;transform:translateX(55%) scale(.85);opacity:.6}
-        .gallery-item[data-pos="-2"],.gallery-item[data-pos="2"]{z-index:1;transform:translateX(0) scale(.6);opacity:0;pointer-events:none}
-        .dot{transition:all .3s ease}.dot.active{width:24px;background-color:#181916}
-        .toast{animation:slideUp .5s ease,fadeOut .5s ease 2.5s forwards}
-        @keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
-        @keyframes fadeOut{to{opacity:0;transform:translateY(-10px)}}
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #FAFAF8;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        }
+        .card-transition {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .card-transition:active {
+            transform: scale(0.98);
+        }
+        
+        /* Circular Stack Gallery Styles */
+        .gallery-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            user-select: none;
+            touch-action: pan-y; /* allow vertical scrolling, block horizontal */
+        }
+        .gallery-item {
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            cursor: pointer;
+            border-radius: 9999px; /* rounded-full */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none; /* prevent selection */
+        }
+        
+        /* Positions for gallery items */
+        .gallery-item[data-pos="0"] { /* Active Center */
+            z-index: 10;
+            transform: translateX(0) scale(1);
+            opacity: 1;
+        }
+        .gallery-item[data-pos="-1"] { /* Left */
+            z-index: 5;
+            transform: translateX(-55%) scale(0.85);
+            opacity: 0.6;
+        }
+        .gallery-item[data-pos="1"] { /* Right */
+            z-index: 5;
+            transform: translateX(55%) scale(0.85);
+            opacity: 0.6;
+        }
+        .gallery-item[data-pos="-2"], .gallery-item[data-pos="2"] { /* Far sides */
+            z-index: 1;
+            transform: translateX(0) scale(0.6);
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .dot {
+            transition: all 0.3s ease;
+        }
+        .dot.active {
+            width: 24px;
+            background-color: #181916; /* primary */
+        }
     </style>
 </head>
 <body class="font-body-md text-on-surface selection:bg-secondary-fixed/30 overflow-x-hidden">
 
-<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-center px-margin-mobile md:px-margin-desktop h-16">
-    <div class="font-display-lg-mobile text-display-lg-mobile md:text-headline-sm text-primary">Ayşe &amp; Ömer</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-center px-margin-mobile md:px-margin-desktop h-16">
+    <div class="font-display-lg-mobile text-display-lg-mobile md:text-headline-sm text-primary dark:text-primary-fixed">Ayşe & Ömer</div>
 </header>
 
+<!-- Main Canvas -->
 <main class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max pt-24 pb-32 min-h-screen flex flex-col gap-12">
     
+    <!-- Headline Section -->
     <section class="flex flex-col items-center text-center mt-8">
-        <h1 class="font-display-lg text-display-lg md:text-[80px] text-primary tracking-tighter mb-6">Ayşe &amp; Ömer</h1>
+        <h1 class="font-display-lg text-display-lg md:text-[80px] text-primary tracking-tighter mb-6">
+            Ayşe & Ömer
+        </h1>
         <div class="w-12 h-[1px] bg-outline-variant/50 mb-6"></div>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed px-4">Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz.</p>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed px-4">
+            Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz. Sevgi, kahkaha ve unutulmaz anılarla dolu bu günde yanımızda olmanız dileğiyle.
+        </p>
     </section>
 
-    <!-- Gallery -->
+    <!-- Circular Stack Gallery Section -->
     <section class="w-full flex flex-col items-center">
+        <!-- Gallery Container -->
         <div id="gallery" class="gallery-container w-full h-[350px] md:h-[450px]">
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="0" data-pos="0" draggable="false"><img src="../2/Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Galeri 1" draggable="false"></div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="1" data-pos="1" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Galeri 2" draggable="false"></div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="2" data-pos="2" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Galeri 3" draggable="false"></div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="3" data-pos="-1" draggable="false"><img src="../2/Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Galeri 4" draggable="false"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="0" data-pos="0" draggable="false">
+                <img src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Galeri 1" draggable="false" class="select-none">
+            </div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="1" data-pos="1" draggable="false">
+                <img src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Galeri 2" draggable="false" class="select-none">
+            </div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="2" data-pos="2" draggable="false">
+                <img src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Galeri 3" draggable="false" class="select-none">
+            </div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="3" data-pos="-1" draggable="false">
+                <img src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Galeri 4" draggable="false" class="select-none">
+            </div>
         </div>
-        <div class="flex gap-2 mt-6" id="gallery-dots"><div class="dot active w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div><div class="dot w-2 h-2 rounded-full bg-primary/30"></div></div>
+        
+        <!-- Dots Indicator -->
+        <div class="flex gap-2 mt-6" id="gallery-dots">
+            <div class="dot active w-2 h-2 rounded-full bg-primary/30" data-index="0"></div>
+            <div class="dot w-2 h-2 rounded-full bg-primary/30" data-index="1"></div>
+            <div class="dot w-2 h-2 rounded-full bg-primary/30" data-index="2"></div>
+            <div class="dot w-2 h-2 rounded-full bg-primary/30" data-index="3"></div>
+        </div>
     </section>
 
-    <!-- Details -->
+    <!-- Details Section -->
     <div class="space-y-gutter max-w-4xl mx-auto w-full mt-8">
-        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
-            <div class="flex flex-col items-center mb-8"><h3 class="font-label-caps text-label-caps text-outline mb-2">TARİH</h3><p class="font-headline-sm text-headline-sm text-primary">24 Ağustos 2026</p><p class="font-body-lg text-on-surface-variant italic">Cumartesi</p></div>
+        
+        <!-- Tarih & Saat Card -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow card-transition relative overflow-hidden">
+            <div class="flex flex-col items-center mb-8">
+                <h3 class="font-label-caps text-label-caps text-outline mb-2">Tarih</h3>
+                <p class="font-headline-sm text-headline-sm text-primary">24 Ağustos 2026</p>
+                <p class="font-body-lg text-body-lg text-on-surface-variant italic">Cumartesi</p>
+            </div>
+            
+            <!-- Timeline Visual -->
             <div class="flex justify-center items-center gap-2 md:gap-4 mb-8">
-                <div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-secondary">local_bar</span></div><span class="font-label-caps text-[10px]">KARŞILAMA</span><span class="font-headline-sm text-primary mt-1">19:00</span></div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10">
+                        <span class="material-symbols-outlined text-secondary">local_bar</span>
+                    </div>
+                    <span class="font-label-caps text-[10px] text-on-surface-variant">KARŞILAMA</span>
+                    <span class="font-headline-sm text-primary mt-1">19:00</span>
+                </div>
+                
                 <div class="w-16 md:w-32 border-t-2 border-dashed border-outline-variant mt-[-40px]"></div>
-                <div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-secondary">favorite</span></div><span class="font-label-caps text-[10px]">TÖREN</span><span class="font-headline-sm text-primary mt-1">20:00</span></div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10">
+                        <span class="material-symbols-outlined text-secondary">favorite</span>
+                    </div>
+                    <span class="font-label-caps text-[10px] text-on-surface-variant">TÖREN</span>
+                    <span class="font-headline-sm text-primary mt-1">20:00</span>
+                </div>
             </div>
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn&dates=20260824T160000Z/20260824T210000Z&location=%C4%B0deal+Moonlight" target="_blank" class="w-full py-4 px-6 border border-secondary text-secondary font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed/10 transition-colors flex items-center justify-center gap-2 text-center"><span class="material-symbols-outlined text-[18px]">event</span>AKILLI TAKVİME EKLE</a>
+            
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn+T%C3%B6reni&dates=20260824T160000Z/20260824T210000Z&details=Hayat%C4%B1m%C4%B1z%C4%B1+birle%C5%9Ftirdi%C4%9Fimiz+bu+%C3%B6zel+g%C3%BCn%C3%BC+sizinle+payla%C5%9Fmaktan+b%C3%BCy%C3%BCk+mutluluk+duyuyoruz.&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi,+Becen,+Elit+Sk.+NO+:+8,+38040+Melikgazi/Kayseri" target="_blank" class="w-full py-4 px-6 border border-secondary text-secondary font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed/10 transition-colors flex items-center justify-center gap-2 group cursor-pointer block text-center">
+                <span class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform" data-icon="event">event</span>
+                AKILLI TAKVİME EKLE
+            </a>
         </section>
-        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
-            <div class="flex items-start justify-between mb-6"><div class="flex-1"><h3 class="font-label-caps text-label-caps text-outline mb-4">MEKAN BİLGİSİ</h3><p class="font-headline-sm text-headline-sm text-primary leading-tight">İdeal Moonlight Davet Etkinlik Merkezi</p><p class="font-body-lg text-on-surface-variant mt-2">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p></div><div class="bg-secondary-fixed/30 p-3 rounded-full ml-4"><span class="material-symbols-outlined text-secondary">location_on</span></div></div>
-            <div class="mb-6 rounded-xl overflow-hidden h-64 border border-outline-variant/20 shadow-inner"><iframe src="https://maps.google.com/maps?q=%C4%B0deal%20Moonlight%20Davet%20Etkinlik%20Merkezi%2C%20Kayseri&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
-            <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="w-full py-4 px-6 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 flex items-center justify-center gap-2 shadow-sm text-center"><span class="material-symbols-outlined text-[18px]">near_me</span>YOL TARİFİ AL</a>
+
+        <!-- Mekan Bilgisi Card -->
+        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow card-transition">
+            <div class="flex items-start justify-between mb-6">
+                <div class="flex-1">
+                    <h3 class="font-label-caps text-label-caps text-outline mb-4">Mekan Bilgisi</h3>
+                    <div class="space-y-1">
+                        <p class="font-headline-sm text-headline-sm text-primary leading-tight">İdeal Moonlight Davet Etkinlik Merkezi</p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p>
+                    </div>
+                </div>
+                <div class="bg-secondary-fixed/30 p-3 rounded-full ml-4">
+                    <span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+                </div>
+            </div>
+            
+            <div class="mb-6 rounded-xl overflow-hidden h-64 border border-outline-variant/20 shadow-inner">
+                <!-- Live Map Iframe -->
+                <iframe 
+                    src="https://maps.google.com/maps?q=İdeal%20Moonlight%20Davet%20Etkinlik%20Merkezi%2C%20Kayseri&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="w-full py-4 px-6 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm block text-center">
+                <span class="material-symbols-outlined text-[18px]" data-icon="near_me">near_me</span>
+                YOL TARİFİ AL
+            </a>
         </section>
+        
     </div>
 
-    <!-- ═══════ ORTA SEVİYE ═══════ -->
-    <div class="flex items-center justify-center my-4 gap-4"><div class="w-20 h-px bg-outline-variant/40"></div><span class="font-label-caps text-[10px] text-outline tracking-widest">ETKİLEŞİM</span><div class="w-20 h-px bg-outline-variant/40"></div></div>
-
-    <!-- RSVP -->
-    <div class="max-w-4xl mx-auto w-full space-y-gutter">
-        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
-            <div class="text-center mb-8"><h3 class="font-label-caps text-label-caps text-outline mb-2">KATILIM FORMU</h3><p class="font-headline-sm text-headline-sm text-primary">LCV Bildirimi</p><p class="font-body-lg text-on-surface-variant mt-2">En geç <strong>10 Ağustos</strong> tarihine kadar bildiriniz.</p></div>
-            <form id="rsvp-form" class="space-y-5" onsubmit="submitRSVP(event)">
-                <div><label class="font-label-caps text-[10px] text-outline block mb-2">KATILIM *</label><div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="evet" class="peer hidden" required/><div class="peer-checked:bg-secondary-fixed peer-checked:border-secondary bg-surface-container-low border border-outline-variant/20 rounded-xl py-4 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">check_circle</span><span class="font-label-caps text-label-caps">KATILACAĞIM</span></div></label><label class="flex-1 cursor-pointer"><input type="radio" name="att" value="hayir" class="peer hidden"/><div class="peer-checked:bg-error-container peer-checked:border-error bg-surface-container-low border border-outline-variant/20 rounded-xl py-4 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">cancel</span><span class="font-label-caps text-label-caps">KATILMAYACAĞIM</span></div></label></div></div>
-                <div><label class="font-label-caps text-[10px] text-outline block mb-2">AD SOYAD *</label><input type="text" id="rn" required class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" placeholder="Adınız"/></div>
-                <div class="grid grid-cols-2 gap-4"><div><label class="font-label-caps text-[10px] text-outline block mb-2">YETİŞKİN</label><input type="number" id="ra" min="1" max="10" value="1" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none"/></div><div><label class="font-label-caps text-[10px] text-outline block mb-2">ÇOCUK</label><input type="number" id="rc" min="0" max="10" value="0" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none"/></div></div>
-                <div><label class="font-label-caps text-[10px] text-outline block mb-2">MENÜ</label><div class="flex gap-3"><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="standart" class="peer hidden" checked/><div class="peer-checked:bg-secondary-fixed/50 peer-checked:border-secondary bg-surface-container-low border border-outline-variant/20 rounded-xl py-3 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">restaurant</span><span class="font-label-caps text-[10px]">STANDART</span></div></label><label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="vejetaryen" class="peer hidden"/><div class="peer-checked:bg-secondary-fixed/50 peer-checked:border-secondary bg-surface-container-low border border-outline-variant/20 rounded-xl py-3 text-center transition-all"><span class="material-symbols-outlined block mx-auto mb-1">eco</span><span class="font-label-caps text-[10px]">VEJETARYEN</span></div></label></div></div>
-                <div><label class="font-label-caps text-[10px] text-outline block mb-2">NOT</label><textarea id="rnote" rows="2" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl px-4 py-3 outline-none resize-none" placeholder="İsteğe bağlı"></textarea></div>
-                <button type="submit" id="rsvp-btn" class="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-all"><span class="material-symbols-outlined text-[18px]">send</span>GÖNDER</button>
-            </form>
-            <div id="rsvp-ok" class="hidden text-center py-8"><span class="material-symbols-outlined text-secondary text-5xl block mb-4">task_alt</span><p class="font-headline-sm text-primary">Teşekkürler!</p><p class="text-on-surface-variant mt-2">Katılım bilginiz kaydedildi.</p></div>
-        </section>
-
-        <!-- WhatsApp -->
-        <section class="bg-secondary-fixed/20 border border-secondary/20 rounded-2xl p-6 flex items-start gap-4">
-            <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-secondary text-[28px]">chat</span></div>
-            <div><h3 class="font-label-caps text-label-caps text-primary mb-1">WHATSAPP HATIRLATICI</h3><p class="font-body-md text-on-surface-variant">Düğünden 1 gün önce otomatik konum hatırlatması alacaksınız.</p></div>
-        </section>
-
-        <!-- Spotify -->
-        <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow">
-            <div class="text-center mb-8"><h3 class="font-label-caps text-label-caps text-outline mb-2">MÜZİK</h3><p class="font-headline-sm text-headline-sm text-primary">Şarkı İsteği</p><p class="font-body-lg text-on-surface-variant mt-2">Düğünde çalmasını istediğiniz şarkıları bildirin!</p></div>
-            <div class="space-y-4">
-                <div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input type="text" id="ss" class="w-full bg-surface-container-low border border-outline-variant/20 rounded-xl pl-10 pr-4 py-3 outline-none focus:border-secondary" placeholder="Şarkı veya sanatçı..." oninput="searchS(this.value)"/></div>
-                <div id="sr" class="space-y-2 max-h-48 overflow-y-auto"></div>
-                <div><h4 class="font-label-caps text-[10px] text-outline mb-3">İSTEK LİSTESİ</h4><div id="sl"><p class="text-on-surface-variant/50 text-sm italic">Henüz şarkı eklenmedi...</p></div></div>
-                <button onclick="submitS()" id="sbtn" class="w-full border border-secondary text-secondary font-label-caps text-label-caps py-3 rounded-xl flex items-center justify-center gap-2 hover:bg-secondary-fixed/10 disabled:opacity-30" disabled><span class="material-symbols-outlined text-[18px]">send</span>GÖNDER</button>
-            </div>
-        </section>
+    <!-- Subtle Footer Note -->
+    <div class="mt-stack-md text-center opacity-40">
+        <div class="w-12 h-px bg-outline-variant mx-auto mb-4"></div>
+        <p class="font-label-caps text-[10px] tracking-widest">AYŞE & ÖMER — 2026</p>
     </div>
 
-    <div class="mt-stack-md text-center opacity-40"><div class="w-12 h-px bg-outline-variant mx-auto mb-4"></div><p class="font-label-caps text-[10px] tracking-widest">AYŞE &amp; ÖMER — 2026</p></div>
 </main>
 
-<div class="fixed inset-0 pointer-events-none -z-10 bg-[#FAFAF8]"><div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary-fixed/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div><div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div></div>
-<div id="tc" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"></div>
+<!-- Background Atmospheric Effect -->
+<div class="fixed inset-0 pointer-events-none -z-10 bg-[#FAFAF8]">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary-fixed/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
+</div>
 
 <script>
-    const sb=window.supabase.createClient('https://bwzfhmskhcwbysdkwrtk.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emZobXNraGN3YnlzZGt3cnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NzYwNjEsImV4cCI6MjA5ODU1MjA2MX0.txjA3C2iaca6kKhWnwU4E_l_s0-HgGTkV1fvwEmadVM');
+    // Circular Stack Gallery Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const gallery = document.getElementById('gallery');
+        const items = document.querySelectorAll('.gallery-item');
+        const dots = document.querySelectorAll('.dot');
+        const totalItems = items.length;
+        
+        let currentIndex = 0;
+        let startX = 0;
+        let isDragging = false;
+        let currentTranslate = 0;
+        let animationID;
 
-    // Gallery
-    document.addEventListener('DOMContentLoaded',()=>{const g=document.getElementById('gallery'),items=document.querySelectorAll('.gallery-item'),dots=document.querySelectorAll('.dot'),n=items.length;let ci=0,sx=0,dr=false,ct=0;
-    function ug(){items.forEach((it,i)=>{let d=i-ci;if(d<-1)d+=n;if(d>1&&n>3){if(d===n-1)d=-1;else d=2;}it.setAttribute('data-pos',d);});dots.forEach((d,i)=>{i===ci?d.classList.add('active'):d.classList.remove('active');});}
-    function sh(dir){ci=dir==='l'?(ci+1)%n:(ci-1+n)%n;ug();}
-    items.forEach((it,i)=>{it.addEventListener('click',()=>{if(ci===i)return;let d=i-ci;if(d<-1)d+=n;if(d===n-1)d=-1;if(d===1)sh('l');else if(d===-1)sh('r');else{ci=i;ug();}});});
-    dots.forEach((d,i)=>{d.addEventListener('click',()=>{ci=i;ug();});});
-    g.addEventListener('mousedown',e=>{dr=true;sx=e.pageX;});g.addEventListener('touchstart',e=>{dr=true;sx=e.touches[0].clientX;},{passive:true});
-    window.addEventListener('mouseup',()=>{if(!dr)return;dr=false;if(ct<-50)sh('r');else if(ct>50)sh('l');ct=0;});
-    window.addEventListener('touchend',()=>{if(!dr)return;dr=false;if(ct<-50)sh('r');else if(ct>50)sh('l');ct=0;});
-    window.addEventListener('mousemove',e=>{if(dr)ct=e.pageX-sx;});window.addEventListener('touchmove',e=>{if(dr)ct=e.touches[0].clientX-sx;},{passive:true});
-    ug();});
+        function updateGallery() {
+            items.forEach((item, index) => {
+                let diff = index - currentIndex;
+                
+                // Handle circular wrapping
+                if (diff < -1) diff += totalItems;
+                if (diff > 1 && totalItems > 3) {
+                    if (diff === totalItems - 1) diff = -1;
+                    else diff = 2; // hide others
+                }
+                
+                item.setAttribute('data-pos', diff);
+            });
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
 
-    // RSVP
-    async function submitRSVP(e){e.preventDefault();const b=document.getElementById('rsvp-btn');b.disabled=true;
-    try{await sb.from('rsvp_responses').insert([{attendance:document.querySelector('input[name="att"]:checked')?.value,name:document.getElementById('rn').value,adults:+document.getElementById('ra').value,children:+document.getElementById('rc').value,menu:document.querySelector('input[name="menu"]:checked')?.value,note:document.getElementById('rnote').value,template:'2_orta'}]);document.getElementById('rsvp-form').classList.add('hidden');document.getElementById('rsvp-ok').classList.remove('hidden');toast('Kaydedildi! 🎉','s');}catch(er){toast('Hata.','e');b.disabled=false;}}
+        function shiftGallery(direction) {
+            if (direction === 'left') {
+                currentIndex = (currentIndex + 1) % totalItems;
+            } else if (direction === 'right') {
+                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            }
+            updateGallery();
+        }
 
-    // Spotify
-    let songs=[];
-    function searchS(q){const r=document.getElementById('sr');if(q.length<2){r.innerHTML='';return;}r.innerHTML=[{n:q+' - Aşk',a:'Sanatçı 1'},{n:q+' - Dans',a:'Sanatçı 2'}].map(s=>`<div class="flex items-center justify-between bg-surface-container-low rounded-xl border border-outline-variant/10 px-4 py-3 hover:bg-surface-container-high cursor-pointer" onclick="addS('${s.n}','${s.a}')"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[20px]">music_note</span><div><p class="font-label-caps text-[11px]">${s.n}</p><p class="text-xs text-on-surface-variant">${s.a}</p></div></div><span class="material-symbols-outlined text-secondary text-[20px]">add_circle</span></div>`).join('');}
-    function addS(n,a){if(songs.find(s=>s.n===n))return;songs.push({n,a});rsl();document.getElementById('ss').value='';document.getElementById('sr').innerHTML='';}
-    function remS(i){songs.splice(i,1);rsl();}
-    function rsl(){const l=document.getElementById('sl'),b=document.getElementById('sbtn');if(!songs.length){l.innerHTML='<p class="text-on-surface-variant/50 text-sm italic">Henüz şarkı eklenmedi...</p>';b.disabled=true;return;}b.disabled=false;l.innerHTML=songs.map((s,i)=>`<div class="flex items-center justify-between bg-secondary-fixed/20 rounded-xl px-4 py-3 mb-2"><div><p class="font-label-caps text-[11px]">${i+1}. ${s.n}</p><p class="text-xs text-on-surface-variant">${s.a}</p></div><button onclick="remS(${i})" class="text-error"><span class="material-symbols-outlined text-[18px]">close</span></button></div>`).join('');}
-    async function submitS(){try{await sb.from('song_requests').insert(songs.map(s=>({song_name:s.n,artist:s.a,template:'2_orta'})));toast('Şarkılar kaydedildi! 🎵','s');songs=[];rsl();}catch(e){toast('Hata.','e');}}
+        // Click to center logic
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                if (currentIndex === index) return; // Already active
+                
+                let diff = index - currentIndex;
+                if (diff < -1) diff += totalItems;
+                if (diff === totalItems - 1) diff = -1;
+                
+                if (diff === 1) shiftGallery('left');
+                else if (diff === -1) shiftGallery('right');
+                else {
+                    currentIndex = index;
+                    updateGallery();
+                }
+            });
+        });
 
-    function toast(m,t){const d=document.createElement('div');d.className=`toast px-6 py-3 rounded-xl shadow-lg font-label-caps text-label-caps ${t==='s'?'bg-primary text-on-primary':'bg-error text-on-error'}`;d.textContent=m;document.getElementById('tc').appendChild(d);setTimeout(()=>d.remove(),3000);}
+        // Touch/Mouse Drag Logic
+        gallery.addEventListener('mousedown', touchStart);
+        gallery.addEventListener('touchstart', touchStart, {passive: true});
+        
+        window.addEventListener('mouseup', touchEnd);
+        window.addEventListener('touchend', touchEnd);
+        
+        window.addEventListener('mousemove', touchMove);
+        window.addEventListener('touchmove', touchMove, {passive: true});
+
+        function touchStart(event) {
+            isDragging = true;
+            startX = getPositionX(event);
+            animationID = requestAnimationFrame(animation);
+        }
+
+        function touchMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                currentTranslate = currentPosition - startX;
+            }
+        }
+
+        function touchEnd() {
+            if (!isDragging) return;
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            
+            const movedBy = currentTranslate;
+            
+            if (movedBy < -50) {
+                shiftGallery('right'); // dragged left, show right image
+            } else if (movedBy > 50) {
+                shiftGallery('left'); // dragged right, show left image
+            }
+            
+            currentTranslate = 0;
+            updateGallery();
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        function animation() {
+            if (isDragging) {
+                requestAnimationFrame(animation);
+            }
+        }
+        
+        // Initial setup
+        updateGallery();
+    });
+
+    // Ripple Micro-interaction for buttons
+    document.querySelectorAll('.card-transition').forEach(card => {
+        card.addEventListener('mousedown', function() {
+            this.style.transform = 'scale(0.98)';
+        });
+        card.addEventListener('mouseup', function() {
+            this.style.transform = '';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+        
+        card.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+        }, {passive: true});
+        card.addEventListener('touchend', function() {
+            this.style.transform = '';
+        });
+    });
 </script>
 </body>
 </html>
