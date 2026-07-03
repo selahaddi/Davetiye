@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayşe &amp; Ömer - Davetiye</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "brand-navy": "#0F172A",
+                        "brand-slate": "#1E293B",
+                        "brand-gold": "#D4AF37",
+                        "on-surface-variant": "#d0c5af"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["DM Sans"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "label-md": ["DM Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F172A;
+            background-image: radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 1) 70%);
+            min-height: 100vh;
+        }
+        .gold-border { border: 1px solid rgba(212, 175, 55, 0.3); }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #e9c349, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes slideFade { 0%, 20% { opacity: 1; } 25%, 95% { opacity: 0; } 100% { opacity: 1; } }
+        .slider { position: relative; width: 100%; max-width: 600px; aspect-ratio: 4/5; margin: 0 auto; overflow: hidden; border-radius: 12px; }
+        .slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: slideFade 16s infinite; }
+        .slider img:nth-child(1) { animation-delay: 0s; } .slider img:nth-child(2) { animation-delay: 4s; } .slider img:nth-child(3) { animation-delay: 8s; } .slider img:nth-child(4) { animation-delay: 12s; }
+        .toast { animation: su .5s ease, fo .5s ease 2.5s forwards; }
+        @keyframes su { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fo { to { opacity: 0; } }
+    </style>
+</head>
+<body class="text-gray-200 pb-16">
+
+    <main class="pt-20 pb-24 px-4 md:px-16 max-w-[1280px] mx-auto flex flex-col items-center justify-center gap-16">
+        
+        <section class="w-full flex flex-col items-center text-center space-y-12">
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <p class="font-label-md text-brand-gold tracking-widest uppercase">Birlikteliğe İlk Adım</p>
+                <h1 class="font-headline-lg-mobile md:font-display-lg text-white">Ayşe <span class="italic font-normal mx-2 text-brand-gold">&amp;</span> Ömer</h1>
+            </div>
+            <div class="slider gold-border shadow-2xl">
+                <img src="../6/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Photo 1"/>
+                <img src="../6/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Photo 2"/>
+                <img src="../6/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Photo 3"/>
+                <img src="../6/The_same_romantic_couple_from_202606302012.jpeg" alt="Photo 4"/>
+            </div>
+        </section>
+
+        <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-brand-slate/40 backdrop-blur-sm gold-border rounded-xl p-10 flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-brand-gold text-4xl mb-4">calendar_month</span>
+                <p class="font-label-md text-brand-gold uppercase tracking-widest mb-2">Tarih</p>
+                <h3 class="font-headline-md text-white mb-6">24 Ağustos 2026</h3>
+                <a href="https://calendar.google.com" target="_blank" class="mt-auto px-6 py-3 border border-brand-gold text-brand-gold font-label-md uppercase tracking-widest hover:bg-brand-gold hover:text-brand-navy transition-colors rounded">Takvime Ekle</a>
+            </div>
+            <div class="bg-brand-slate/40 backdrop-blur-sm gold-border rounded-xl p-10 flex flex-col items-center text-center">
+                <span class="material-symbols-outlined text-brand-gold text-4xl mb-4">location_on</span>
+                <p class="font-label-md text-brand-gold uppercase tracking-widest mb-2">Mekan</p>
+                <h3 class="font-headline-md text-white mb-6">İdeal Moonlight</h3>
+                <a href="https://maps.google.com" target="_blank" class="mt-auto px-6 py-3 bg-brand-gold text-brand-navy font-label-md uppercase tracking-widest hover:bg-white transition-colors rounded">Yol Tarifi</a>
+            </div>
+        </section>
+
+        <div class="w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent"></div>
+
+        <!-- RSVP Form -->
+        <section class="w-full max-w-3xl bg-brand-slate/40 backdrop-blur-sm gold-border rounded-xl p-10 text-center">
+            <span class="material-symbols-outlined text-brand-gold text-4xl mb-4">drafts</span>
+            <h3 class="font-headline-md text-white mb-8">LCV - Lütfen Cevap Veriniz</h3>
+            <form id="rf" class="space-y-6 text-left" onsubmit="subR(event)">
+                <div class="flex gap-4">
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="att" value="evet" class="peer hidden" required/><div class="peer-checked:bg-brand-gold/10 peer-checked:border-brand-gold bg-brand-navy border border-gray-700 rounded py-3 text-center transition-all"><span class="font-label-md text-white uppercase tracking-widest">Katılıyorum</span></div></label>
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="att" value="hayir" class="peer hidden"/><div class="peer-checked:bg-red-500/10 peer-checked:border-red-500 bg-brand-navy border border-gray-700 rounded py-3 text-center transition-all"><span class="font-label-md text-white uppercase tracking-widest">Katılamıyorum</span></div></label>
+                </div>
+                <input type="text" id="rn" required class="w-full bg-brand-navy border border-gray-700 rounded px-4 py-3 text-white outline-none focus:border-brand-gold font-body-md" placeholder="Adınız Soyadınız"/>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="number" id="ra" min="1" max="10" value="1" class="w-full bg-brand-navy border border-gray-700 rounded px-4 py-3 text-white outline-none focus:border-brand-gold font-body-md" placeholder="Yetişkin"/>
+                    <input type="number" id="rc" min="0" max="10" value="0" class="w-full bg-brand-navy border border-gray-700 rounded px-4 py-3 text-white outline-none focus:border-brand-gold font-body-md" placeholder="Çocuk"/>
+                </div>
+                <div class="flex gap-4">
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="standart" class="peer hidden" checked/><div class="peer-checked:bg-brand-gold/10 peer-checked:border-brand-gold bg-brand-navy border border-gray-700 rounded py-2 text-center transition-all font-label-md uppercase tracking-widest text-xs">Standart Menü</div></label>
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="vejetaryen" class="peer hidden"/><div class="peer-checked:bg-brand-gold/10 peer-checked:border-brand-gold bg-brand-navy border border-gray-700 rounded py-2 text-center transition-all font-label-md uppercase tracking-widest text-xs">Vejetaryen</div></label>
+                </div>
+                <textarea id="rno" rows="2" class="w-full bg-brand-navy border border-gray-700 rounded px-4 py-3 text-white outline-none focus:border-brand-gold resize-none font-body-md" placeholder="Eklemek istediğiniz bir not var mı?"></textarea>
+                <button type="submit" id="rb" class="w-full bg-brand-gold text-brand-navy font-label-md uppercase tracking-widest py-3 rounded hover:bg-white transition-colors">Gönder</button>
+            </form>
+            <div id="rok" class="hidden py-8"><span class="material-symbols-outlined text-brand-gold text-5xl mb-4">check_circle</span><p class="font-headline-md text-white">Teşekkür Ederiz!</p></div>
+        </section>
+
+        <!-- Notification & Music -->
+        <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-brand-slate/40 backdrop-blur-sm gold-border rounded-xl p-8 flex items-center gap-4">
+                <span class="material-symbols-outlined text-brand-gold text-4xl">mark_chat_unread</span>
+                <div><h3 class="font-headline-md text-white text-xl mb-1">WhatsApp Hatırlatma</h3><p class="font-body-md text-gray-400 text-sm">Düğünden 1 gün önce detaylı saat ve konum bilgilendirmesi iletilecektir.</p></div>
+            </div>
+            <div class="bg-brand-slate/40 backdrop-blur-sm gold-border rounded-xl p-8">
+                <h3 class="font-headline-md text-white text-xl mb-4 text-center">Şarkı İsteği</h3>
+                <div class="space-y-4">
+                    <input type="text" id="ss" class="w-full bg-brand-navy border border-gray-700 rounded px-4 py-2 text-white outline-none focus:border-brand-gold font-body-md" placeholder="Sanatçı veya şarkı ara..." oninput="searchS(this.value)"/>
+                    <div id="sr" class="space-y-2 max-h-40 overflow-y-auto"></div>
+                    <div id="sl" class="border border-gray-700 rounded p-2 min-h-[60px] bg-brand-navy/50"><p class="text-gray-500 font-label-md text-xs italic text-center mt-2">Liste boş</p></div>
+                    <button onclick="subS()" id="sbtn" class="w-full border border-brand-gold text-brand-gold font-label-md uppercase tracking-widest py-2 rounded hover:bg-brand-gold hover:text-brand-navy disabled:opacity-30 transition-colors" disabled>Gönder</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="text-center font-label-md text-gray-500 uppercase tracking-widest py-8"><p>Ayşe &amp; Ömer 2026</p></footer>
+    <div id="tc" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
+
+    <script>
+    const sb=window.supabase.createClient('https://bwzfhmskhcwbysdkwrtk.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emZobXNraGN3YnlzZGt3cnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NzYwNjEsImV4cCI6MjA5ODU1MjA2MX0.txjA3C2iaca6kKhWnwU4E_l_s0-HgGTkV1fvwEmadVM');
+    const T='6_orta';
+
+    async function subR(e){e.preventDefault();document.getElementById('rb').disabled=true;try{await sb.from('rsvp_responses').insert([{attendance:document.querySelector('input[name="att"]:checked')?.value,name:document.getElementById('rn').value,adults:+document.getElementById('ra').value,children:+document.getElementById('rc').value,menu:document.querySelector('input[name="menu"]:checked')?.value,note:document.getElementById('rno').value,template:T}]);document.getElementById('rf').classList.add('hidden');document.getElementById('rok').classList.remove('hidden');toast('Kaydedildi!','s');}catch(er){toast('Hata oluştu.','e');document.getElementById('rb').disabled=false;}}
+
+    let songs=[];
+    function searchS(q){const r=document.getElementById('sr');if(q.length<2){r.innerHTML='';return;}r.innerHTML=[{n:q+' - Aşk',a:'Sanatçı A'},{n:q+' - Dans',a:'Sanatçı B'}].map(s=>`<div class="flex items-center justify-between bg-brand-navy border border-gray-700 rounded px-3 py-2 cursor-pointer hover:border-brand-gold" onclick="addS('${s.n}','${s.a}')"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-brand-gold text-[18px]">music_note</span><span class="font-body-md text-sm text-white">${s.n}</span></div><span class="material-symbols-outlined text-brand-gold text-[18px]">add</span></div>`).join('');}
+    function addS(n,a){if(songs.find(s=>s.n===n))return;songs.push({n,a});rsl();document.getElementById('ss').value='';document.getElementById('sr').innerHTML='';}
+    function remS(i){songs.splice(i,1);rsl();}
+    function rsl(){const l=document.getElementById('sl'),b=document.getElementById('sbtn');if(!songs.length){l.innerHTML='<p class="text-gray-500 font-label-md text-xs italic text-center mt-2">Liste boş</p>';b.disabled=true;return;}b.disabled=false;l.innerHTML=songs.map((s,i)=>`<div class="flex items-center justify-between bg-brand-gold/10 border border-brand-gold/20 rounded px-3 py-1 mb-1"><span class="font-body-md text-sm text-brand-gold">${s.n}</span><button onclick="remS(${i})" class="text-red-400"><span class="material-symbols-outlined text-[16px]">close</span></button></div>`).join('');}
+    async function subS(){try{await sb.from('song_requests').insert(songs.map(s=>({song_name:s.n,artist:s.a,template:T})));toast('Şarkılar eklendi!','s');songs=[];rsl();}catch(e){toast('Hata oluştu.','e');}}
+
+    function toast(m,t){const d=document.createElement('div');d.className=`toast px-4 py-3 rounded border font-label-md uppercase tracking-widest text-xs ${t==='s'?'bg-brand-slate border-brand-gold text-brand-gold':'bg-red-900 border-red-500 text-red-200'}`;d.textContent=m;document.getElementById('tc').appendChild(d);setTimeout(()=>d.remove(),3000);}
+    </script>
+</body>
+</html>

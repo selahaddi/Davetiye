@@ -1,364 +1,250 @@
-<!DOCTYPE html><html class="dark" lang="tr" style=""><head>
-  <base href="/7_ileri/">
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Ayşe &amp; Ahmet — Düğün Davetiyesi</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "surface-tint": "#f6b4d1",
-                "on-primary-fixed": "#350c23",
-                "tertiary-fixed": "#ffddba",
-                "on-primary-fixed-variant": "#68374f",
-                "error": "#ffb4ab",
-                "on-error": "#690005",
-                "inverse-on-surface": "#3d2c31",
-                "on-tertiary-fixed-variant": "#673d00",
-                "on-primary": "#4e2139",
-                "on-secondary-fixed-variant": "#7c2c23",
-                "surface-container": "#2b1b20",
-                "surface-dim": "#1d0f14",
-                "on-primary-container": "#d596b3",
-                "on-background": "#f7dce2",
-                "secondary-fixed-dim": "#ffb4a9",
-                "primary-container": "#5d2e46",
-                "outline": "#9c8d92",
-                "error-container": "#93000a",
-                "surface-container-high": "#36252b",
-                "surface": "#1d0f14",
-                "inverse-primary": "#834e68",
-                "background": "#1d0f14",
-                "secondary-fixed": "#ffdad5",
-                "secondary": "#ffb4a9",
-                "on-surface": "#f7dce2",
-                "inverse-surface": "#f7dce2",
-                "secondary-container": "#7c2c23",
-                "tertiary": "#ffb865",
-                "primary-fixed": "#ffd8e7",
-                "outline-variant": "#504348",
-                "on-secondary-container": "#ff9a8c",
-                "surface-bright": "#46343a",
-                "on-secondary-fixed": "#400101",
-                "on-error-container": "#ffdad6",
-                "surface-container-lowest": "#180a0f",
-                "surface-container-low": "#26171c",
-                "on-surface-variant": "#d4c2c8",
-                "on-tertiary": "#482a00",
-                "primary-fixed-dim": "#f6b4d1",
-                "tertiary-container": "#5a3500",
-                "surface-variant": "#423035",
-                "primary": "#f6b4d1",
-                "tertiary-fixed-dim": "#ffb865",
-                "on-tertiary-container": "#de9b48",
-                "surface-container-highest": "#423035",
-                "on-secondary": "#5e1610",
-                "on-tertiary-fixed": "#2b1700"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            "spacing": {
-                "stack-md": "32px",
-                "margin-desktop": "64px",
-                "unit": "8px",
-                "stack-lg": "80px",
-                "margin-mobile": "20px",
-                "gutter": "24px",
-                "container-max": "1280px",
-                "stack-sm": "12px",
-                "section-gap": "120px"
-            },
-            "fontFamily": {
-                "label-sm": ["Hanken Grotesk"],
-                "headline-lg": ["Playfair Display"],
-                "label-lg": ["Hanken Grotesk"],
-                "body-lg": ["Hanken Grotesk"],
-                "headline-xl": ["Playfair Display"],
-                "headline-md": ["Playfair Display"],
-                "headline-lg-mobile": ["Playfair Display"],
-                "body-md": ["Hanken Grotesk"]
-            },
-            "fontSize": {
-                "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500"}],
-                "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                "body-lg": ["20px", {"lineHeight": "32px", "fontWeight": "400"}],
-                "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
-                "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
-                "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}]
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ayşe &amp; Ömer - Davetiye</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#f6b4d1",
+                        "on-primary-fixed": "#350c23",
+                        "tertiary-fixed": "#ffddba",
+                        "on-primary-fixed-variant": "#68374f",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#3d2c31",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "on-primary": "#4e2139",
+                        "on-secondary-fixed-variant": "#7c2c23",
+                        "surface-container": "#2b1b20",
+                        "surface-dim": "#1d0f14",
+                        "on-primary-container": "#d596b3",
+                        "on-background": "#f7dce2",
+                        "secondary-fixed-dim": "#ffb4a9",
+                        "primary-container": "#5d2e46",
+                        "outline": "#9c8d92",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#36252b",
+                        "surface": "#1d0f14",
+                        "inverse-primary": "#834e68",
+                        "background": "#1d0f14",
+                        "secondary-fixed": "#ffdad5",
+                        "secondary": "#ffb4a9",
+                        "on-surface": "#f7dce2",
+                        "inverse-surface": "#f7dce2",
+                        "secondary-container": "#7c2c23",
+                        "tertiary": "#ffb865",
+                        "primary-fixed": "#ffd8e7",
+                        "outline-variant": "#504348",
+                        "on-secondary-container": "#ff9a8c",
+                        "surface-bright": "#46343a",
+                        "on-secondary-fixed": "#400101",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#180a0f",
+                        "surface-container-low": "#26171c",
+                        "on-surface-variant": "#d4c2c8",
+                        "on-tertiary": "#482a00",
+                        "primary-fixed-dim": "#f6b4d1",
+                        "tertiary-container": "#5a3500",
+                        "surface-variant": "#423035",
+                        "primary": "#f6b4d1",
+                        "tertiary-fixed-dim": "#ffb865",
+                        "on-tertiary-container": "#de9b48",
+                        "surface-container-highest": "#423035",
+                        "on-secondary": "#5e1610",
+                        "on-tertiary-fixed": "#2b1700"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"]
+                    }
+                }
             }
-          }
         }
-      }
     </script>
-<style>
-        body {
-            background-color: #1d0f14;
-            color: #f7dce2;
-            overflow-x: hidden;
-        }
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.04;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
-        .parallax-bg {
-            transition: transform 0.1s ease-out;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .stagger-1 { transition-delay: 0.1s; }
-        .stagger-2 { transition-delay: 0.2s; }
-        .stagger-3 { transition-delay: 0.3s; }
-
-        .boho-border {
-            border: 1px solid rgba(255, 184, 101, 0.2);
-            position: relative;
-        }
-        .boho-border::after {
-            content: '';
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            right: 4px;
-            bottom: 4px;
-            border: 1px solid rgba(255, 184, 101, 0.1);
-            pointer-events: none;
-        }
+    <style>
+        body { background-color: #1d0f14; color: #f7dce2; overflow-x: hidden; }
+        .grain-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+        .boho-border { border: 1px solid rgba(255, 184, 101, 0.2); position: relative; }
+        .boho-border::after { content: ''; position: absolute; top: 4px; left: 4px; right: 4px; bottom: 4px; border: 1px solid rgba(255, 184, 101, 0.1); pointer-events: none; border-radius: inherit; }
+        .toast { animation: su .5s ease, fo .5s ease 2.5s forwards; }
+        @keyframes su { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fo { to { opacity: 0; } }
+        .watermark{position:relative}.watermark::after{content:'ÖRNEK';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-30deg);font-family:'Playfair Display';font-size:1.5rem;font-weight:700;color:rgba(255,184,101,.3);pointer-events:none;letter-spacing:0.2em}
+        .masonry{columns:2;column-gap:16px}@media(min-width:768px){.masonry{columns:3}}.masonry>div{break-inside:avoid;margin-bottom:16px}
     </style>
 </head>
-<body class="selection:bg-tertiary selection:text-on-tertiary">
-<div class="grain-overlay"></div>
-<!-- Top Navigation App Bar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface-dim/80 shadow-[0_8px_32px_0_rgba(62,102,89,0.05)]">
-<div class="flex items-center justify-between px-gutter py-4 w-full max-w-7xl mx-auto">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined">waves</span>
-</div>
-<div class="font-headline-md text-headline-md text-primary tracking-widest uppercase">
-                Ayşe &amp; Ahmet
+<body class="font-body-md">
+    <div class="grain-overlay"></div>
+
+    <main class="py-20 px-4 md:px-16 max-w-[1280px] mx-auto flex flex-col items-center justify-center gap-16 relative z-10">
+        
+        <section class="w-full flex flex-col items-center text-center space-y-12">
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <p class="font-label-lg text-tertiary uppercase tracking-[0.2em]">Bir Ömür Boyu</p>
+                <h1 class="font-headline-lg-mobile md:font-headline-xl text-primary font-serif italic">Ayşe &amp; Ömer</h1>
             </div>
-<button class="text-primary transition-all duration-700 ease-in-out hover:scale-110">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="relative h-[90vh] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full object-cover scale-110 parallax-bg opacity-30 blur-md bg-cover bg-center" style="background-image: url('./rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg')"></div>
-<div class="absolute inset-0 bg-gradient-to-b from-surface/0 via-surface/60 to-surface"></div>
-</div>
-<div class="relative z-10 text-center max-w-4xl reveal active">
-<div class="mb-stack-sm text-tertiary font-label-lg tracking-[0.3em] uppercase">Bir Aşk Hikayesi Başlıyor</div>
-<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8 leading-none">
-                    Ayşe <span class="text-tertiary italic">&amp;</span> Ahmet
-                </h1>
-<div class="flex justify-center mb-8">
-    <div class="w-56 h-80 md:w-72 md:h-96 rounded-[120px] overflow-hidden border-2 border-tertiary/30 p-1 shadow-2xl">
-        <img src="./rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg" alt="Ayşe ve Ahmet" class="w-full h-full object-cover rounded-[120px]">
-    </div>
-</div>
-<div class="flex flex-col items-center gap-4">
-<div class="h-16 w-px bg-gradient-to-b from-tertiary/0 to-tertiary"></div>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">
-                        Sanatsal bir ruhun, özgür bir kalple buluştuğu bu özel geceyi bizimle paylaşın.
-                    </p>
-</div>
-</div>
-</section>
-<!-- The Date & Location -->
-<section class="py-stack-lg bg-surface relative">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-<div class="reveal stagger-1 active flex flex-col gap-8">
-    <!-- Tarih & Saat Kartı -->
-    <div class="boho-border p-8 md:p-10 bg-surface-container-low rounded-lg overflow-hidden shadow-lg">
-        <div class="font-headline-lg text-headline-lg text-primary mb-2">24 Ağustos</div>
-        <div class="font-label-lg text-label-lg text-secondary tracking-widest uppercase mb-8">Cumartesi, 2026</div>
-        <div class="space-y-6">
-            <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-tertiary">local_bar</span>
-                <div>
-                    <div class="font-label-lg text-label-lg text-on-surface">Karşılama Saati</div>
-                    <div class="font-body-md text-body-md text-on-surface-variant">19:00</div>
+            <div class="w-full max-w-4xl relative">
+                <div class="aspect-[16/9] overflow-hidden rounded-2xl boho-border shadow-2xl">
+                    <img src="../7/rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg" alt="Hero" class="w-full h-full object-cover opacity-90"/>
                 </div>
             </div>
-            <div class="flex items-center gap-4">
-                <span class="material-symbols-outlined text-tertiary">favorite</span>
-                <div>
-                    <div class="font-label-lg text-label-lg text-on-surface">Tören Saati</div>
-                    <div class="font-body-md text-body-md text-on-surface-variant">20:00</div>
+        </section>
+
+        <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-surface-container rounded-2xl p-10 flex flex-col items-center text-center boho-border shadow-lg">
+                <span class="material-symbols-outlined text-tertiary text-4xl mb-6">event</span>
+                <p class="font-label-lg text-tertiary uppercase tracking-widest mb-2">Ne Zaman</p>
+                <h3 class="font-headline-md text-primary mb-2">24 Ağustos 2026</h3>
+                <a href="https://calendar.google.com" target="_blank" class="mt-auto px-6 py-3 border border-tertiary text-tertiary font-label-lg uppercase tracking-widest hover:bg-tertiary/10 transition-colors rounded-full flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">calendar_today</span>Takvime Ekle</a>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-10 flex flex-col items-center text-center boho-border shadow-lg">
+                <span class="material-symbols-outlined text-tertiary text-4xl mb-6">location_on</span>
+                <p class="font-label-lg text-tertiary uppercase tracking-widest mb-2">Nerede</p>
+                <h3 class="font-headline-md text-primary mb-2">İdeal Moonlight</h3>
+                <a href="https://maps.google.com" target="_blank" class="mt-auto px-6 py-3 bg-tertiary text-surface font-label-lg uppercase tracking-widest hover:bg-tertiary/90 transition-colors rounded-full flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">directions</span>Yol Tarifi</a>
+            </div>
+        </section>
+
+        <div class="w-16 h-px bg-tertiary/30 mx-auto"></div>
+
+        <!-- RSVP Form -->
+        <section class="w-full max-w-3xl bg-surface-container rounded-2xl p-10 text-center boho-border shadow-lg">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4">mail</span>
+            <h3 class="font-headline-md text-primary mb-2">Lütfen Cevap Veriniz</h3>
+            <p class="font-label-lg text-tertiary uppercase tracking-widest mb-8">10 Ağustos'a kadar</p>
+            <form id="rf" class="space-y-6 text-left" onsubmit="subR(event)">
+                <div class="flex gap-4">
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="att" value="evet" class="peer hidden" required/><div class="peer-checked:bg-primary/20 peer-checked:border-primary bg-surface border border-outline-variant rounded-xl py-4 text-center transition-all"><span class="font-label-lg text-primary uppercase tracking-widest">Katılıyorum</span></div></label>
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="att" value="hayir" class="peer hidden"/><div class="peer-checked:bg-error/20 peer-checked:border-error bg-surface border border-outline-variant rounded-xl py-4 text-center transition-all"><span class="font-label-lg text-error uppercase tracking-widest">Maalesef</span></div></label>
+                </div>
+                <input type="text" id="rn" required class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary font-body-md" placeholder="Adınız Soyadınız"/>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="number" id="ra" min="1" max="10" value="1" class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary font-body-md" placeholder="Yetişkin"/>
+                    <input type="number" id="rc" min="0" max="10" value="0" class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary font-body-md" placeholder="Çocuk"/>
+                </div>
+                <div class="flex gap-4">
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="standart" class="peer hidden" checked/><div class="peer-checked:bg-primary/20 peer-checked:border-primary bg-surface border border-outline-variant rounded-xl py-3 text-center transition-all font-label-lg uppercase tracking-widest text-xs">Standart</div></label>
+                    <label class="flex-1 cursor-pointer"><input type="radio" name="menu" value="vejetaryen" class="peer hidden"/><div class="peer-checked:bg-primary/20 peer-checked:border-primary bg-surface border border-outline-variant rounded-xl py-3 text-center transition-all font-label-lg uppercase tracking-widest text-xs">Vegan/Vejetaryen</div></label>
+                </div>
+                <textarea id="rno" rows="2" class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary resize-none font-body-md" placeholder="Notunuz..."></textarea>
+                <button type="submit" id="rb" class="w-full bg-primary text-on-primary font-label-lg uppercase tracking-widest py-4 rounded-xl hover:bg-primary/90 transition-colors">Gönder</button>
+            </form>
+            <div id="rok" class="hidden py-8"><span class="material-symbols-outlined text-primary text-5xl mb-4">check_circle</span><p class="font-headline-md text-primary">Teşekkürler!</p></div>
+        </section>
+
+        <!-- Notification & Music -->
+        <section class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-surface-container rounded-2xl p-8 flex items-center gap-4 boho-border shadow-lg">
+                <span class="material-symbols-outlined text-tertiary text-4xl">notifications_active</span>
+                <div><h3 class="font-headline-md text-primary text-xl mb-1">WhatsApp</h3><p class="font-body-md text-on-surface-variant text-sm">Konum ve saat bilgisi düğünden 1 gün önce iletilecektir.</p></div>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-8 boho-border shadow-lg">
+                <h3 class="font-headline-md text-primary text-xl mb-4 text-center">Şarkı İsteği</h3>
+                <div class="space-y-4">
+                    <input type="text" id="ss" class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary font-body-md" placeholder="Şarkı ara..." oninput="searchS(this.value)"/>
+                    <div id="sr" class="space-y-2 max-h-40 overflow-y-auto"></div>
+                    <div id="sl" class="border border-outline-variant rounded-xl p-3 min-h-[60px] bg-surface"><p class="text-on-surface-variant/50 font-label-sm italic text-center mt-2">Liste boş</p></div>
+                    <button onclick="subS()" id="sbtn" class="w-full border border-primary text-primary font-label-lg uppercase tracking-widest py-3 rounded-xl hover:bg-primary hover:text-on-primary disabled:opacity-30 transition-colors" disabled>Gönder</button>
                 </div>
             </div>
-        </div>
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+Ahmet+D%C3%BC%C4%9F%C3%BCn+T%C3%B6reni&dates=20260824T160000Z/20260824T210000Z&details=Bu+mutlu+g%C3%BCn%C3%BCm%C3%BCzde+sizi+de+aram%C4%B1zda+g%C3%B6rmekten+mutluluk+duyar%C4%B1z.&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi,+Becen,+Elit+Sk.+NO+:+8,+38040+Melikgazi/Kayseri" target="_blank" rel="noopener noreferrer" class="mt-8 block px-8 py-4 bg-tertiary text-on-tertiary font-label-lg tracking-widest uppercase hover:bg-tertiary-container transition-all duration-300 w-full text-center rounded">
-            AKILLI TAKVİME EKLE
-        </a>
-    </div>
+        </section>
 
+        <div class="w-16 h-px bg-tertiary/30 mx-auto"></div>
 
-</div>
-<div class="relative h-[500px] reveal stagger-2 active">
-<div class="absolute top-0 left-0 w-[75%] h-[80%] object-cover rounded-lg shadow-xl bg-cover bg-center" style="background-image: url('./Çift_temalı_resim_oluştur_2K_202607021926.jpeg')"></div>
-<div class="absolute bottom-0 right-0 w-[65%] h-[75%] object-cover rounded-lg shadow-2xl border-4 border-surface bg-cover bg-center" style="background-image: url('./bu_çifti_(image.png)_deki_temalı_202607021925.jpeg')"></div>
-<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary-container p-6 rounded-lg hidden md:flex items-center justify-center border border-outline/20 z-10 shadow-lg">
-<p class="font-headline-md text-headline-md text-primary italic leading-tight text-center">“Aşk, en özgür sanattır.”</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Artistic Break -->
-<section class="py-section-gap flex flex-col items-center justify-center text-center px-margin-mobile reveal active">
-<div class="w-24 h-px bg-tertiary mb-stack-md"></div>
-<blockquote class="font-headline-lg text-headline-lg text-on-surface max-w-3xl italic">
-                "Hayatımızın bu en anlamlı serüvenine, ruhumuzun müziğini katarak başlıyoruz."
-            </blockquote>
-<div class="w-24 h-px bg-tertiary mt-stack-md"></div>
-</section>
-<!-- Event Timeline / Cards -->
-<section class="py-stack-lg bg-surface-container-lowest">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="mb-stack-lg text-center">
-<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Program</h2>
-<p class="font-body-md text-body-md text-on-surface-variant">Gece boyunca sürecek sanat ve kutlama akışı</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-unit">
-<!-- Step 1 -->
-<div class="bg-surface-container p-10 reveal stagger-1 flex flex-col gap-6 border-l border-tertiary/20 active" style="--mouse-x: 367px; --mouse-y: 1731.39990234375px;">
-<div class="text-tertiary font-headline-md text-headline-md">19:00</div>
-<div>
-<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Karşılama Kokteyli</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Bahçede gün batımı eşliğinde akustik melodiler ve tadımlar.</p>
-</div>
-<span class="material-symbols-outlined text-secondary text-4xl">local_bar</span>
-</div>
-<!-- Step 2 -->
-<div class="bg-surface-container-high p-10 reveal stagger-2 flex flex-col gap-6 border-l border-tertiary/40 active">
-<div class="text-tertiary font-headline-md text-headline-md">20:00</div>
-<div>
-<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Nikah Töreni</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Asırlık ağaçların altında, yıldızların şahitliğinde 'Evet'.</p>
-</div>
-<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
-</div>
-<!-- Step 3 -->
-<div class="bg-surface-container-highest p-10 reveal stagger-3 flex flex-col gap-6 border-l border-tertiary/60 active">
-<div class="text-tertiary font-headline-md text-headline-md">21:00</div>
-<div>
-<h3 class="font-label-lg text-label-lg text-on-surface uppercase tracking-widest mb-2">Akşam Yemeği &amp; Eğlence</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Bohem sofralarda şölen, sonrasında sınırsız müzik.</p>
-</div>
-<span class="material-symbols-outlined text-secondary text-4xl">restaurant</span>
-</div>
-</div>
-</div>
-</section>
-<!-- RSVP Section -->
-<section class="py-section-gap relative">
-<div class="max-w-2xl mx-auto px-margin-mobile reveal active">
+        <!-- Photo Wall -->
+        <section class="w-full max-w-4xl bg-surface-container rounded-2xl p-10 boho-border shadow-lg">
+            <div class="text-center mb-8"><span class="material-symbols-outlined text-primary text-4xl mb-4">photo_camera</span><h3 class="font-headline-md text-primary mb-2">Anı Duvarı</h3><p class="font-body-md text-on-surface-variant">Çektiğiniz kareleri bizimle paylaşın.</p></div>
+            <div class="flex justify-center mb-6"><div class="w-24 h-24 bg-surface border border-outline-variant rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-tertiary text-3xl">qr_code_scanner</span></div></div>
+            <label class="w-full max-w-sm mx-auto bg-tertiary/10 border border-tertiary text-tertiary font-label-lg uppercase tracking-widest py-3 rounded-full flex items-center justify-center gap-2 cursor-pointer hover:bg-tertiary/20 transition-colors mb-8"><span class="material-symbols-outlined text-[18px]">cloud_upload</span>Medya Yükle<input type="file" accept="image/*" multiple class="hidden" onchange="upP(this.files)"/></label>
+            <div id="pg" class="masonry"></div>
+            <p id="pe" class="text-center text-on-surface-variant/50 font-label-sm italic mt-4">Henüz fotoğraf yok...</p>
+        </section>
 
-</div>
-</section>
-<!-- Mekan Bilgisi Section (Bottom) -->
-<section class="py-stack-lg bg-surface relative">
-    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop reveal active">
-        <div class="boho-border p-8 md:p-12 bg-surface-container-low rounded-lg overflow-hidden shadow-2xl flex flex-col md:flex-row gap-8 md:gap-16 items-center">
-            <div class="w-full md:w-1/2 space-y-6">
-                <div class="font-headline-lg text-headline-lg text-primary mb-6">Mekan Bilgisi</div>
-                <div class="flex items-start gap-4">
-                    <span class="material-symbols-outlined text-tertiary mt-1 text-3xl">location_on</span>
-                    <div>
-                        <div class="font-headline-md text-headline-md text-on-surface mb-2">İdeal Moonlight Davet Etkinlik Merkezi</div>
-                        <div class="font-body-lg text-body-lg text-on-surface-variant">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</div>
+        <!-- Premium Gallery -->
+        <section class="w-full max-w-5xl bg-surface-container rounded-2xl p-10 boho-border shadow-lg">
+            <div class="text-center mb-8"><span class="material-symbols-outlined text-primary text-4xl mb-4">auto_awesome</span><h3 class="font-headline-md text-primary mb-2">Özel Çekimler</h3></div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="watermark rounded-2xl overflow-hidden aspect-[3/4] bg-surface relative group cursor-pointer border border-outline-variant" onclick="showPM(1)"><img src="../7/rgb(31,_18,_23)_olan_tarzda_202607021929.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-tertiary font-label-lg tracking-widest uppercase text-xs">Satın Al: ₺49.90</span></div></div>
+                <div class="watermark rounded-2xl overflow-hidden aspect-[3/4] bg-surface relative group cursor-pointer border border-outline-variant" onclick="showPM(2)"><img src="../7/bu_çifti_(image.png)_deki_temalı_202607021925.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-tertiary font-label-lg tracking-widest uppercase text-xs">Satın Al: ₺49.90</span></div></div>
+                <div class="watermark rounded-2xl overflow-hidden aspect-[3/4] bg-surface relative group cursor-pointer border border-outline-variant" onclick="showPM(3)"><img src="../7/Çift_temalı_resim_oluştur_2K_202607021926.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/><div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><span class="text-tertiary font-label-lg tracking-widest uppercase text-xs">Satın Al: ₺49.90</span></div></div>
+            </div>
+        </section>
+
+        <!-- Gift List -->
+        <section class="w-full max-w-4xl bg-surface-container rounded-2xl p-10 boho-border shadow-lg">
+            <div class="text-center mb-8"><span class="material-symbols-outlined text-primary text-4xl mb-4">card_giftcard</span><h3 class="font-headline-md text-primary mb-2">Hediye &amp; Takı</h3></div>
+            <div class="space-y-8">
+                <div class="bg-surface border border-outline-variant rounded-xl p-6">
+                    <p class="font-label-lg text-tertiary uppercase tracking-widest mb-2">IBAN Bilgisi</p>
+                    <div class="flex items-center gap-4"><p class="font-body-md text-on-surface font-mono flex-1">TR00 0000 0000 0000 0000 0000 00</p><button onclick="copyI()" class="bg-tertiary/10 text-tertiary p-2 rounded-xl hover:bg-tertiary/20"><span class="material-symbols-outlined text-[20px]">content_copy</span></button></div>
+                </div>
+                <div>
+                    <p class="font-label-lg text-tertiary uppercase tracking-widest mb-4">Hediye Listesi</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between bg-surface border border-outline-variant rounded-xl px-5 py-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">kitchen</span><span class="font-body-md">Mutfak Robotu</span></div><button onclick="resG(this,'Mutfak Robotu')" class="bg-primary text-on-primary font-label-lg uppercase tracking-widest text-xs px-5 py-2 rounded-full hover:bg-primary/90">Hediye Et</button></div>
+                        <div class="flex items-center justify-between bg-surface border border-outline-variant rounded-xl px-5 py-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">coffee_maker</span><span class="font-body-md">Kahve Makinesi</span></div><button onclick="resG(this,'Kahve Makinesi')" class="bg-primary text-on-primary font-label-lg uppercase tracking-widest text-xs px-5 py-2 rounded-full hover:bg-primary/90">Hediye Et</button></div>
                     </div>
                 </div>
-                <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" rel="noopener noreferrer" class="mt-8 flex items-center justify-center gap-2 px-8 py-4 bg-tertiary text-on-tertiary font-label-lg tracking-widest uppercase hover:bg-tertiary-container transition-all duration-300 w-full md:w-max text-center rounded shadow-lg">
-                    <span class="material-symbols-outlined text-lg">directions_car</span>
-                    YOL TARİFİ AL
-                </a>
+                <div class="border-t border-outline-variant pt-8">
+                    <p class="font-label-lg text-tertiary uppercase tracking-widest mb-4">Tebrik Mesajı</p>
+                    <form onsubmit="subG(event)" class="space-y-4">
+                        <input type="text" id="gs" required class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary font-body-md" placeholder="Adınız"/>
+                        <textarea id="gm" rows="2" class="w-full bg-surface border border-outline-variant rounded-xl px-4 py-3 text-on-surface outline-none focus:border-primary resize-none font-body-md" placeholder="Mesajınız"></textarea>
+                        <button type="submit" class="w-full border border-tertiary text-tertiary font-label-lg uppercase tracking-widest py-3 rounded-xl hover:bg-tertiary hover:text-surface transition-colors">Mesajı İlet</button>
+                    </form>
+                </div>
             </div>
-            <div class="w-full md:w-1/2 h-64 md:h-96 rounded-lg overflow-hidden border border-outline/20 shadow-lg">
-                <iframe src="https://maps.google.com/maps?q=%C4%B0deal%20Moonlight%20Davet%20Etkinlik%20Merkezi,%20Kayseri&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-surface-dim w-full py-section-gap">
+        </section>
 
-</footer>
-<script>
-        // Simple reveal animation on scroll
-        const reveals = document.querySelectorAll('.reveal');
-        
-        const revealOnScroll = () => {
-            reveals.forEach(reveal => {
-                const windowHeight = window.innerHeight;
-                const revealTop = reveal.getBoundingClientRect().top;
-                const revealPoint = 150;
-                
-                if (revealTop < windowHeight - revealPoint) {
-                    reveal.classList.add('active');
-                }
-            });
-        };
+    </main>
 
-        // Parallax effect for hero
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.parallax-bg');
-            if(parallax) {
-                parallax.style.transform = `translateY(${scrolled * 0.4}px) scale(1.1)`;
-            }
-            revealOnScroll();
-        });
+    <!-- Modal -->
+    <div id="pm" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm"><div class="bg-surface-container boho-border rounded-2xl p-8 max-w-sm mx-4 text-center"><span class="material-symbols-outlined text-primary text-5xl mb-4">shopping_cart</span><h3 class="font-headline-md text-primary mb-2">Satın Al</h3><p class="text-on-surface-variant font-label-lg tracking-widest uppercase mb-6">₺49.90</p><div class="flex gap-3"><button onclick="closePM()" class="flex-1 border border-outline-variant text-on-surface-variant rounded-xl py-3 font-label-lg tracking-widest uppercase text-xs">Vazgeç</button><button onclick="buyP()" class="flex-1 bg-primary text-on-primary rounded-xl py-3 font-label-lg tracking-widest uppercase text-xs">Onayla</button></div></div></div>
 
-        // Initialize reveal
-        revealOnScroll();
+    <footer class="text-center font-label-lg text-on-surface-variant/50 uppercase tracking-widest py-8 relative z-10"><p>Ayşe &amp; Ömer 2026</p></footer>
+    <div id="tc" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2"></div>
 
-        // Subtle mouse interaction for grain/cards
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            document.querySelectorAll('.bg-surface-container').forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
+    <script>
+    const sb=window.supabase.createClient('https://bwzfhmskhcwbysdkwrtk.supabase.co','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3emZobXNraGN3YnlzZGt3cnRrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI5NzYwNjEsImV4cCI6MjA5ODU1MjA2MX0.txjA3C2iaca6kKhWnwU4E_l_s0-HgGTkV1fvwEmadVM');
+    const SU='https://bwzfhmskhcwbysdkwrtk.supabase.co';
+    const T='7_ileri';
+
+    async function subR(e){e.preventDefault();document.getElementById('rb').disabled=true;try{await sb.from('rsvp_responses').insert([{attendance:document.querySelector('input[name="att"]:checked')?.value,name:document.getElementById('rn').value,adults:+document.getElementById('ra').value,children:+document.getElementById('rc').value,menu:document.querySelector('input[name="menu"]:checked')?.value,note:document.getElementById('rno').value,template:T}]);document.getElementById('rf').classList.add('hidden');document.getElementById('rok').classList.remove('hidden');toast('Kaydedildi!','s');}catch(er){toast('Hata.','e');document.getElementById('rb').disabled=false;}}
+
+    let songs=[];
+    function searchS(q){const r=document.getElementById('sr');if(q.length<2){r.innerHTML='';return;}r.innerHTML=[{n:q+' - Aşk',a:'Sanatçı A'},{n:q+' - Dans',a:'Sanatçı B'}].map(s=>`<div class="flex items-center justify-between bg-surface border border-outline-variant rounded-xl px-4 py-3 cursor-pointer hover:border-primary" onclick="addS('${s.n}','${s.a}')"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-[20px]">music_note</span><span class="font-body-md text-sm">${s.n}</span></div><span class="material-symbols-outlined text-primary text-[20px]">add_circle</span></div>`).join('');}
+    function addS(n,a){if(songs.find(s=>s.n===n))return;songs.push({n,a});rsl();document.getElementById('ss').value='';document.getElementById('sr').innerHTML='';}
+    function remS(i){songs.splice(i,1);rsl();}
+    function rsl(){const l=document.getElementById('sl'),b=document.getElementById('sbtn');if(!songs.length){l.innerHTML='<p class="text-on-surface-variant/50 font-label-sm italic text-center mt-2">Liste boş</p>';b.disabled=true;return;}b.disabled=false;l.innerHTML=songs.map((s,i)=>`<div class="flex items-center justify-between bg-primary/10 border border-primary/20 rounded-xl px-4 py-2 mb-2"><span class="font-body-md text-sm text-primary">${s.n}</span><button onclick="remS(${i})" class="text-error"><span class="material-symbols-outlined text-[18px]">close</span></button></div>`).join('');}
+    async function subS(){try{await sb.from('song_requests').insert(songs.map(s=>({song_name:s.n,artist:s.a,template:T})));toast('Şarkılar eklendi!','s');songs=[];rsl();}catch(e){toast('Hata.','e');}}
+
+    async function upP(files){for(const f of files){try{await sb.storage.from('wedding-photos').upload(T+'/'+Date.now()+'_'+f.name,f);}catch(e){}}toast('Fotoğraf yüklendi!','s');loadP();}
+    async function loadP(){try{const{data}=await sb.storage.from('wedding-photos').list(T,{limit:50});const g=document.getElementById('pg'),e=document.getElementById('pe');if(!data||!data.length){e?.classList.remove('hidden');return;}e?.classList.add('hidden');g.innerHTML=data.filter(f=>f.name!=='.emptyFolderPlaceholder').map(f=>`<div class="rounded-xl border border-outline-variant overflow-hidden"><img src="${SU}/storage/v1/object/public/wedding-photos/${T}/${f.name}" class="w-full object-cover" loading="lazy"/></div>`).join('');}catch(e){}}
+    loadP();
+
+    let sp=0;function showPM(id){sp=id;document.getElementById('pm').classList.remove('hidden');document.getElementById('pm').classList.add('flex');}
+    function closePM(){document.getElementById('pm').classList.add('hidden');document.getElementById('pm').classList.remove('flex');}
+    async function buyP(){closePM();toast('İşlem alındı!','s');try{await sb.from('photo_purchases').insert([{photo_id:sp,template:T}]);}catch(e){}}
+
+    function copyI(){navigator.clipboard.writeText('TR00 0000 0000 0000 0000 0000 00');toast('Kopyalandı!','s');}
+    async function resG(btn,g){btn.disabled=true;btn.textContent='SEÇİLDİ';btn.className='bg-outline-variant text-on-surface-variant font-label-lg uppercase tracking-widest text-xs px-5 py-2 rounded-full cursor-not-allowed';try{await sb.from('gift_reservations').insert([{gift_name:g,template:T}]);}catch(e){}toast(g+' seçildi!','s');}
+    async function subG(e){e.preventDefault();try{await sb.from('gift_messages').insert([{sender:document.getElementById('gs').value,message:document.getElementById('gm').value,template:T}]);toast('Mesaj iletildi!','s');document.getElementById('gs').value='';document.getElementById('gm').value='';}catch(er){toast('Hata.','e');}}
+
+    function toast(m,t){const d=document.createElement('div');d.className=`toast px-6 py-3 rounded-full border shadow-lg font-label-lg tracking-widest uppercase text-xs ${t==='s'?'bg-surface border-primary text-primary':'bg-error-container border-error text-error'}`;d.textContent=m;document.getElementById('tc').appendChild(d);setTimeout(()=>d.remove(),3000);}
     </script>
-
-
-</body></html>
+</body>
+</html>

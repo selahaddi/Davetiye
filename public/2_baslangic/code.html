@@ -1,229 +1,69 @@
 <!DOCTYPE html>
 <html class="light" lang="tr">
 <head>
-  <base href="/2_baslangic/">
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Ayşe & Ömer | Düğün Davetiyesi</title>
-    <!-- Tailwind CSS -->
+    <title>Ayşe &amp; Ömer | Düğün Davetiyesi</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
-    <!-- Material Symbols -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-                    "secondary-fixed": "#f7e382",
-                    "surface-container-highest": "#e5e2e0",
-                    "outline-variant": "#c8c7bf",
-                    "on-primary-fixed-variant": "#474743",
-                    "surface-tint": "#5f5e5b",
-                    "on-primary-fixed": "#1c1c19",
-                    "primary-container": "#2d2d2a",
-                    "outline": "#777770",
-                    "on-tertiary-fixed-variant": "#474743",
-                    "on-primary-container": "#969490",
-                    "error": "#ba1a1a",
-                    "error-container": "#ffdad6",
-                    "on-tertiary-fixed": "#1b1c18",
-                    "on-tertiary-container": "#95948f",
-                    "inverse-surface": "#313030",
-                    "inverse-primary": "#c8c6c2",
-                    "tertiary": "#181815",
-                    "primary-fixed": "#e5e2dd",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-low": "#f7f3f1",
-                    "secondary": "#6c5e06",
-                    "on-secondary-fixed": "#211b00",
-                    "tertiary-container": "#2c2d29",
-                    "secondary-fixed-dim": "#dac769",
-                    "on-surface": "#1c1b1b",
-                    "primary-fixed-dim": "#c8c6c2",
-                    "surface-dim": "#ddd9d8",
-                    "on-error-container": "#93000a",
-                    "surface-container-lowest": "#ffffff",
-                    "on-surface-variant": "#474741",
-                    "surface-container-high": "#ebe7e6",
-                    "primary": "#181916",
-                    "tertiary-fixed-dim": "#c8c7c1",
-                    "surface-container": "#f1edec",
-                    "secondary-container": "#f7e382",
-                    "on-primary": "#ffffff",
-                    "on-background": "#1c1b1b",
-                    "surface": "#fdf8f7",
-                    "surface-variant": "#e5e2e0",
-                    "on-secondary": "#ffffff",
-                    "inverse-on-surface": "#f4f0ef",
-                    "background": "#fdf8f7",
-                    "tertiary-fixed": "#e4e2dc",
-                    "on-secondary-container": "#73640e",
-                    "surface-bright": "#fdf8f7",
-                    "on-secondary-fixed-variant": "#524700",
-                    "on-error": "#ffffff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "2xl": "1rem",
-                    "full": "0.75rem",
-                    "3xl": "1.5rem"
-            },
-            "spacing": {
-                    "margin-desktop": "80px",
-                    "stack-lg": "120px",
-                    "margin-mobile": "24px",
-                    "gutter": "24px",
-                    "stack-sm": "32px",
-                    "container-max": "1120px",
-                    "stack-md": "64px",
-                    "unit": "8px"
-            },
-            "fontFamily": {
-                    "body-md": ["Inter"],
-                    "display-lg": ["Playfair Display"],
-                    "body-lg": ["Inter"],
-                    "headline-sm": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "display-lg-mobile": ["Playfair Display"],
-                    "label-caps": ["Inter"]
-            },
-            "fontSize": {
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
-                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
-                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600"}]
-            }
+            "colors":{"secondary-fixed":"#f7e382","surface-container-highest":"#e5e2e0","outline-variant":"#c8c7bf","on-primary-fixed-variant":"#474743","surface-tint":"#5f5e5b","on-primary-fixed":"#1c1c19","primary-container":"#2d2d2a","outline":"#777770","on-tertiary-fixed-variant":"#474743","on-primary-container":"#969490","error":"#ba1a1a","error-container":"#ffdad6","on-tertiary-fixed":"#1b1c18","on-tertiary-container":"#95948f","inverse-surface":"#313030","inverse-primary":"#c8c6c2","tertiary":"#181815","primary-fixed":"#e5e2dd","on-tertiary":"#ffffff","surface-container-low":"#f7f3f1","secondary":"#6c5e06","on-secondary-fixed":"#211b00","tertiary-container":"#2c2d29","secondary-fixed-dim":"#dac769","on-surface":"#1c1b1b","primary-fixed-dim":"#c8c6c2","surface-dim":"#ddd9d8","on-error-container":"#93000a","surface-container-lowest":"#ffffff","on-surface-variant":"#474741","surface-container-high":"#ebe7e6","primary":"#181916","tertiary-fixed-dim":"#c8c7c1","surface-container":"#f1edec","secondary-container":"#f7e382","on-primary":"#ffffff","on-background":"#1c1b1b","surface":"#fdf8f7","surface-variant":"#e5e2e0","on-secondary":"#ffffff","inverse-on-surface":"#f4f0ef","background":"#fdf8f7","tertiary-fixed":"#e4e2dc","on-secondary-container":"#73640e","surface-bright":"#fdf8f7","on-secondary-fixed-variant":"#524700","on-error":"#ffffff"},
+            "borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","2xl":"1rem","full":"0.75rem","3xl":"1.5rem"},
+            "spacing":{"margin-desktop":"80px","stack-lg":"120px","margin-mobile":"24px","gutter":"24px","stack-sm":"32px","container-max":"1120px","stack-md":"64px","unit":"8px"},
+            "fontFamily":{"body-md":["Inter"],"display-lg":["Playfair Display"],"body-lg":["Inter"],"headline-sm":["Playfair Display"],"headline-md":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-caps":["Inter"]},
+            "fontSize":{"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"1.6","letterSpacing":"0.01em","fontWeight":"300"}],"headline-sm":["24px",{"lineHeight":"1.4","fontWeight":"400"}],"headline-md":["32px",{"lineHeight":"1.3","fontWeight":"400"}],"display-lg-mobile":["40px",{"lineHeight":"1.2","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"1.2","letterSpacing":"0.15em","fontWeight":"600"}]}
           },
         },
       }
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        body {
-            background-color: #FAFAF8;
-            -webkit-font-smoothing: antialiased;
-        }
-        .editorial-shadow {
-            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-        }
-        .card-transition {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-        }
-        .card-transition:active {
-            transform: scale(0.98);
-        }
-        
-        /* Circular Stack Gallery Styles */
-        .gallery-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            user-select: none;
-            touch-action: pan-y; /* allow vertical scrolling, block horizontal */
-        }
-        .gallery-item {
-            position: absolute;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            cursor: pointer;
-            border-radius: 9999px; /* rounded-full */
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none; /* prevent selection */
-        }
-        
-        /* Positions for gallery items */
-        .gallery-item[data-pos="0"] { /* Active Center */
-            z-index: 10;
-            transform: translateX(0) scale(1);
-            opacity: 1;
-        }
-        .gallery-item[data-pos="-1"] { /* Left */
-            z-index: 5;
-            transform: translateX(-55%) scale(0.85);
-            opacity: 0.6;
-        }
-        .gallery-item[data-pos="1"] { /* Right */
-            z-index: 5;
-            transform: translateX(55%) scale(0.85);
-            opacity: 0.6;
-        }
-        .gallery-item[data-pos="-2"], .gallery-item[data-pos="2"] { /* Far sides */
-            z-index: 1;
-            transform: translateX(0) scale(0.6);
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .dot {
-            transition: all 0.3s ease;
-        }
-        .dot.active {
-            width: 24px;
-            background-color: #181916; /* primary */
-        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        body { background-color: #FAFAF8; -webkit-font-smoothing: antialiased; }
+        .editorial-shadow { box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05); }
+        .card-transition { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+        .card-transition:active { transform: scale(0.98); }
+        .gallery-container { position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; user-select: none; touch-action: pan-y; }
+        .gallery-item { position: absolute; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); cursor: pointer; border-radius: 9999px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .gallery-item[data-pos="0"] { z-index: 10; transform: translateX(0) scale(1); opacity: 1; }
+        .gallery-item[data-pos="-1"] { z-index: 5; transform: translateX(-55%) scale(0.85); opacity: 0.6; }
+        .gallery-item[data-pos="1"] { z-index: 5; transform: translateX(55%) scale(0.85); opacity: 0.6; }
+        .gallery-item[data-pos="-2"], .gallery-item[data-pos="2"] { z-index: 1; transform: translateX(0) scale(0.6); opacity: 0; pointer-events: none; }
+        .dot { transition: all 0.3s ease; }
+        .dot.active { width: 24px; background-color: #181916; }
     </style>
 </head>
 <body class="font-body-md text-on-surface selection:bg-secondary-fixed/30 overflow-x-hidden">
 
 <!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-center px-margin-mobile md:px-margin-desktop h-16">
-    <div class="font-display-lg-mobile text-display-lg-mobile md:text-headline-sm text-primary dark:text-primary-fixed">Ayşe & Ömer</div>
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 flex items-center justify-center px-margin-mobile md:px-margin-desktop h-16">
+    <div class="font-display-lg-mobile text-display-lg-mobile md:text-headline-sm text-primary">Ayşe &amp; Ömer</div>
 </header>
 
-<!-- Main Canvas -->
 <main class="container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max pt-24 pb-32 min-h-screen flex flex-col gap-12">
     
     <!-- Headline Section -->
     <section class="flex flex-col items-center text-center mt-8">
-        <h1 class="font-display-lg text-display-lg md:text-[80px] text-primary tracking-tighter mb-6">
-            Ayşe & Ömer
-        </h1>
+        <h1 class="font-display-lg text-display-lg md:text-[80px] text-primary tracking-tighter mb-6">Ayşe &amp; Ömer</h1>
         <div class="w-12 h-[1px] bg-outline-variant/50 mb-6"></div>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed px-4">
-            Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz. Sevgi, kahkaha ve unutulmaz anılarla dolu bu günde yanımızda olmanız dileğiyle.
-        </p>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed px-4">Hayatımızı birleştirdiğimiz bu özel günü sizinle paylaşmaktan büyük mutluluk duyuyoruz. Sevgi, kahkaha ve unutulmaz anılarla dolu bu günde yanımızda olmanız dileğiyle.</p>
     </section>
 
-    <!-- Circular Stack Gallery Section -->
+    <!-- Circular Stack Gallery -->
     <section class="w-full flex flex-col items-center">
-        <!-- Gallery Container -->
         <div id="gallery" class="gallery-container w-full h-[350px] md:h-[450px]">
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="0" data-pos="0" draggable="false">
-                <img src="Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Galeri 1" draggable="false" class="select-none">
-            </div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="1" data-pos="1" draggable="false">
-                <img src="Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Galeri 2" draggable="false" class="select-none">
-            </div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="2" data-pos="2" draggable="false">
-                <img src="Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Galeri 3" draggable="false" class="select-none">
-            </div>
-            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="3" data-pos="-1" draggable="false">
-                <img src="Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Galeri 4" draggable="false" class="select-none">
-            </div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="0" data-pos="0" draggable="false"><img src="../2/Galeri/Couple_in_wedding_photo_shoot_202606302012.jpeg" alt="Galeri 1" draggable="false" class="select-none"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="1" data-pos="1" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_vineyard_202606302012.jpeg" alt="Galeri 2" draggable="false" class="select-none"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="2" data-pos="2" draggable="false"><img src="../2/Galeri/Couple_wedding_photo_shoot_yacht_202606302012.jpeg" alt="Galeri 3" draggable="false" class="select-none"></div>
+            <div class="gallery-item w-60 h-60 md:w-80 md:h-80" data-index="3" data-pos="-1" draggable="false"><img src="../2/Galeri/The_same_romantic_couple_from_202606302012.jpeg" alt="Galeri 4" draggable="false" class="select-none"></div>
         </div>
-        
-        <!-- Dots Indicator -->
         <div class="flex gap-2 mt-6" id="gallery-dots">
             <div class="dot active w-2 h-2 rounded-full bg-primary/30" data-index="0"></div>
             <div class="dot w-2 h-2 rounded-full bg-primary/30" data-index="1"></div>
@@ -234,230 +74,90 @@
 
     <!-- Details Section -->
     <div class="space-y-gutter max-w-4xl mx-auto w-full mt-8">
-        
-        <!-- Tarih & Saat Card -->
+        <!-- Tarih & Saat -->
         <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow card-transition relative overflow-hidden">
             <div class="flex flex-col items-center mb-8">
-                <h3 class="font-label-caps text-label-caps text-outline mb-2">Tarih</h3>
+                <h3 class="font-label-caps text-label-caps text-outline mb-2">TARİH</h3>
                 <p class="font-headline-sm text-headline-sm text-primary">24 Ağustos 2026</p>
                 <p class="font-body-lg text-body-lg text-on-surface-variant italic">Cumartesi</p>
             </div>
-            
-            <!-- Timeline Visual -->
             <div class="flex justify-center items-center gap-2 md:gap-4 mb-8">
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10">
-                        <span class="material-symbols-outlined text-secondary">local_bar</span>
-                    </div>
-                    <span class="font-label-caps text-[10px] text-on-surface-variant">KARŞILAMA</span>
-                    <span class="font-headline-sm text-primary mt-1">19:00</span>
-                </div>
-                
+                <div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10"><span class="material-symbols-outlined text-secondary">local_bar</span></div><span class="font-label-caps text-[10px] text-on-surface-variant">KARŞILAMA</span><span class="font-headline-sm text-primary mt-1">19:00</span></div>
                 <div class="w-16 md:w-32 border-t-2 border-dashed border-outline-variant mt-[-40px]"></div>
-                
-                <div class="flex flex-col items-center">
-                    <div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10">
-                        <span class="material-symbols-outlined text-secondary">favorite</span>
-                    </div>
-                    <span class="font-label-caps text-[10px] text-on-surface-variant">TÖREN</span>
-                    <span class="font-headline-sm text-primary mt-1">20:00</span>
-                </div>
+                <div class="flex flex-col items-center"><div class="w-12 h-12 rounded-full bg-secondary-fixed/30 flex items-center justify-center mb-2 z-10"><span class="material-symbols-outlined text-secondary">favorite</span></div><span class="font-label-caps text-[10px] text-on-surface-variant">TÖREN</span><span class="font-headline-sm text-primary mt-1">20:00</span></div>
             </div>
-            
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn+T%C3%B6reni&dates=20260824T160000Z/20260824T210000Z&details=Hayat%C4%B1m%C4%B1z%C4%B1+birle%C5%9Ftirdi%C4%9Fimiz+bu+%C3%B6zel+g%C3%BCn%C3%BC+sizinle+payla%C5%9Fmaktan+b%C3%BCy%C3%BCk+mutluluk+duyuyoruz.&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi,+Becen,+Elit+Sk.+NO+:+8,+38040+Melikgazi/Kayseri" target="_blank" class="w-full py-4 px-6 border border-secondary text-secondary font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed/10 transition-colors flex items-center justify-center gap-2 group cursor-pointer block text-center">
-                <span class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform" data-icon="event">event</span>
-                AKILLI TAKVİME EKLE
-            </a>
+            <div class="flex flex-col gap-2">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ay%C5%9Fe+%26+%C3%96mer+D%C3%BC%C4%9F%C3%BCn+T%C3%B6reni&dates=20260824T160000Z/20260824T210000Z&details=Hayat%C4%B1m%C4%B1z%C4%B1+birle%C5%9Ftirdi%C4%9Fimiz+bu+%C3%B6zel+g%C3%BCn&location=%C4%B0deal+Moonlight+Davet+Etkinlik+Merkezi,+Kayseri" target="_blank" class="w-full py-4 px-6 border border-secondary text-secondary font-label-caps text-label-caps rounded-lg hover:bg-secondary-fixed/10 transition-colors flex items-center justify-center gap-2 group cursor-pointer text-center">
+                    <span class="material-symbols-outlined text-[18px] group-hover:rotate-12 transition-transform">event</span>AKILLI TAKVİME EKLE
+                </a>
+                <button onclick="downloadICS()" class="w-full py-3 px-6 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">download</span>APPLE TAKVİM (.ICS)
+                </button>
+            </div>
         </section>
 
-        <!-- Mekan Bilgisi Card -->
+        <!-- Mekan Bilgisi -->
         <section class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-8 editorial-shadow card-transition">
             <div class="flex items-start justify-between mb-6">
-                <div class="flex-1">
-                    <h3 class="font-label-caps text-label-caps text-outline mb-4">Mekan Bilgisi</h3>
-                    <div class="space-y-1">
-                        <p class="font-headline-sm text-headline-sm text-primary leading-tight">İdeal Moonlight Davet Etkinlik Merkezi</p>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p>
-                    </div>
-                </div>
-                <div class="bg-secondary-fixed/30 p-3 rounded-full ml-4">
-                    <span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
-                </div>
+                <div class="flex-1"><h3 class="font-label-caps text-label-caps text-outline mb-4">MEKAN BİLGİSİ</h3><div class="space-y-1"><p class="font-headline-sm text-headline-sm text-primary leading-tight">İdeal Moonlight Davet Etkinlik Merkezi</p><p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Becen, Elit Sk. NO : 8, 38040 Melikgazi/Kayseri</p></div></div>
+                <div class="bg-secondary-fixed/30 p-3 rounded-full ml-4"><span class="material-symbols-outlined text-secondary">location_on</span></div>
             </div>
-            
             <div class="mb-6 rounded-xl overflow-hidden h-64 border border-outline-variant/20 shadow-inner">
-                <!-- Live Map Iframe -->
-                <iframe 
-                    src="https://maps.google.com/maps?q=İdeal%20Moonlight%20Davet%20Etkinlik%20Merkezi%2C%20Kayseri&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://maps.google.com/maps?q=%C4%B0deal%20Moonlight%20Davet%20Etkinlik%20Merkezi%2C%20Kayseri&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            
-            <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="w-full py-4 px-6 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm block text-center">
-                <span class="material-symbols-outlined text-[18px]" data-icon="near_me">near_me</span>
-                YOL TARİFİ AL
-            </a>
+            <div class="flex flex-col gap-2">
+                <a href="https://maps.app.goo.gl/ZrTyEnhapjdbGpvG7" target="_blank" class="w-full py-4 px-6 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-sm text-center">
+                    <span class="material-symbols-outlined text-[18px]">near_me</span>YOL TARİFİ AL
+                </a>
+                <a href="https://maps.apple.com/?q=Ideal+Moonlight+Davet+Kayseri" target="_blank" class="w-full py-3 px-6 border border-outline-variant text-on-surface-variant font-label-caps text-label-caps rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 text-center">
+                    <span class="material-symbols-outlined text-[18px]">map</span>APPLE MAPS
+                </a>
+            </div>
         </section>
-        
     </div>
 
-    <!-- Subtle Footer Note -->
+    <!-- Footer -->
     <div class="mt-stack-md text-center opacity-40">
         <div class="w-12 h-px bg-outline-variant mx-auto mb-4"></div>
-        <p class="font-label-caps text-[10px] tracking-widest">AYŞE & ÖMER — 2026</p>
+        <p class="font-label-caps text-[10px] tracking-widest">AYŞE &amp; ÖMER — 2026</p>
     </div>
-
 </main>
 
-<!-- Background Atmospheric Effect -->
+<!-- Background -->
 <div class="fixed inset-0 pointer-events-none -z-10 bg-[#FAFAF8]">
     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary-fixed/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
     <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
 </div>
 
 <script>
-    // Circular Stack Gallery Logic
+    // Gallery Logic
     document.addEventListener('DOMContentLoaded', () => {
         const gallery = document.getElementById('gallery');
         const items = document.querySelectorAll('.gallery-item');
         const dots = document.querySelectorAll('.dot');
         const totalItems = items.length;
-        
-        let currentIndex = 0;
-        let startX = 0;
-        let isDragging = false;
-        let currentTranslate = 0;
-        let animationID;
+        let currentIndex = 0, startX = 0, isDragging = false, currentTranslate = 0, animationID;
 
         function updateGallery() {
-            items.forEach((item, index) => {
-                let diff = index - currentIndex;
-                
-                // Handle circular wrapping
-                if (diff < -1) diff += totalItems;
-                if (diff > 1 && totalItems > 3) {
-                    if (diff === totalItems - 1) diff = -1;
-                    else diff = 2; // hide others
-                }
-                
-                item.setAttribute('data-pos', diff);
-            });
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                if (index === currentIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
+            items.forEach((item, index) => { let diff = index - currentIndex; if (diff < -1) diff += totalItems; if (diff > 1 && totalItems > 3) { if (diff === totalItems - 1) diff = -1; else diff = 2; } item.setAttribute('data-pos', diff); });
+            dots.forEach((dot, index) => { index === currentIndex ? dot.classList.add('active') : dot.classList.remove('active'); });
         }
-
-        function shiftGallery(direction) {
-            if (direction === 'left') {
-                currentIndex = (currentIndex + 1) % totalItems;
-            } else if (direction === 'right') {
-                currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-            }
-            updateGallery();
-        }
-
-        // Click to center logic
-        items.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                if (currentIndex === index) return; // Already active
-                
-                let diff = index - currentIndex;
-                if (diff < -1) diff += totalItems;
-                if (diff === totalItems - 1) diff = -1;
-                
-                if (diff === 1) shiftGallery('left');
-                else if (diff === -1) shiftGallery('right');
-                else {
-                    currentIndex = index;
-                    updateGallery();
-                }
-            });
-        });
-
-        // Touch/Mouse Drag Logic
-        gallery.addEventListener('mousedown', touchStart);
-        gallery.addEventListener('touchstart', touchStart, {passive: true});
-        
-        window.addEventListener('mouseup', touchEnd);
-        window.addEventListener('touchend', touchEnd);
-        
-        window.addEventListener('mousemove', touchMove);
-        window.addEventListener('touchmove', touchMove, {passive: true});
-
-        function touchStart(event) {
-            isDragging = true;
-            startX = getPositionX(event);
-            animationID = requestAnimationFrame(animation);
-        }
-
-        function touchMove(event) {
-            if (isDragging) {
-                const currentPosition = getPositionX(event);
-                currentTranslate = currentPosition - startX;
-            }
-        }
-
-        function touchEnd() {
-            if (!isDragging) return;
-            isDragging = false;
-            cancelAnimationFrame(animationID);
-            
-            const movedBy = currentTranslate;
-            
-            if (movedBy < -50) {
-                shiftGallery('right'); // dragged left, show right image
-            } else if (movedBy > 50) {
-                shiftGallery('left'); // dragged right, show left image
-            }
-            
-            currentTranslate = 0;
-            updateGallery();
-        }
-
-        function getPositionX(event) {
-            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-        }
-
-        function animation() {
-            if (isDragging) {
-                requestAnimationFrame(animation);
-            }
-        }
-        
-        // Initial setup
+        function shiftGallery(dir) { currentIndex = dir === 'left' ? (currentIndex + 1) % totalItems : (currentIndex - 1 + totalItems) % totalItems; updateGallery(); }
+        items.forEach((item, index) => { item.addEventListener('click', () => { if (currentIndex === index) return; let diff = index - currentIndex; if (diff < -1) diff += totalItems; if (diff === totalItems - 1) diff = -1; if (diff === 1) shiftGallery('left'); else if (diff === -1) shiftGallery('right'); else { currentIndex = index; updateGallery(); } }); });
+        dots.forEach((dot, index) => { dot.addEventListener('click', () => { currentIndex = index; updateGallery(); }); });
+        gallery.addEventListener('mousedown', e => { isDragging = true; startX = e.pageX; });
+        gallery.addEventListener('touchstart', e => { isDragging = true; startX = e.touches[0].clientX; }, {passive: true});
+        window.addEventListener('mouseup', () => { if (!isDragging) return; isDragging = false; if (currentTranslate < -50) shiftGallery('right'); else if (currentTranslate > 50) shiftGallery('left'); currentTranslate = 0; });
+        window.addEventListener('touchend', () => { if (!isDragging) return; isDragging = false; if (currentTranslate < -50) shiftGallery('right'); else if (currentTranslate > 50) shiftGallery('left'); currentTranslate = 0; });
+        window.addEventListener('mousemove', e => { if (isDragging) currentTranslate = e.pageX - startX; });
+        window.addEventListener('touchmove', e => { if (isDragging) currentTranslate = e.touches[0].clientX - startX; }, {passive: true});
         updateGallery();
     });
 
-    // Ripple Micro-interaction for buttons
-    document.querySelectorAll('.card-transition').forEach(card => {
-        card.addEventListener('mousedown', function() {
-            this.style.transform = 'scale(0.98)';
-        });
-        card.addEventListener('mouseup', function() {
-            this.style.transform = '';
-        });
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = '';
-        });
-        
-        card.addEventListener('touchstart', function() {
-            this.style.transform = 'scale(0.98)';
-        }, {passive: true});
-        card.addEventListener('touchend', function() {
-            this.style.transform = '';
-        });
-    });
+    function downloadICS() {
+        const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','DTSTART:20260824T160000Z','DTEND:20260824T210000Z','SUMMARY:Ayşe ve Ömer Düğün','LOCATION:İdeal Moonlight Davet Etkinlik Merkezi, Kayseri','END:VEVENT','END:VCALENDAR'].join('\r\n');
+        const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics], {type:'text/calendar'})); a.download = 'ayse-omer-dugun.ics'; a.click();
+    }
 </script>
 </body>
 </html>
