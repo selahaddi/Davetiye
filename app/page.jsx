@@ -9,13 +9,13 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const TEMPLATES = [
-  "1_baslangic", "1_orta", "1_ileri",
-  "2_baslangic", "2_orta", "2_ileri",
-  "3_baslangic", "3_orta", "3_ileri",
-  "4_baslangic", "4_orta", "4_ileri",
-  "5_baslangic", "5_orta", "5_ileri",
-  "6_baslangic", "6_orta", "6_ileri",
-  "7_baslangic", "7_orta", "7_ileri"
+  "1", "1_baslangic", "1_orta", "1_ileri",
+  "2", "2_baslangic", "2_orta", "2_ileri",
+  "3", "3_baslangic", "3_orta", "3_ileri",
+  "4", "4_baslangic", "4_orta", "4_ileri",
+  "5", "5_baslangic", "5_orta", "5_ileri",
+  "6", "6_baslangic", "6_orta", "6_ileri",
+  "7", "7_baslangic", "7_orta", "7_ileri"
 ];
 
 export default function AdminPage() {
